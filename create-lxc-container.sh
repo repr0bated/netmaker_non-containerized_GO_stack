@@ -18,7 +18,7 @@ PURPLE='\033[0;35m'
 CYAN='\033[0;36m'
 NC='\033[0m' # No Color
 
-# Default values from CLAUDE.md - Updated for OVS setup
+# Default values from CLAUDE.md - Updated for dual IP OVS setup
 DEFAULT_CONTAINER_ID="100"
 DEFAULT_CONTAINER_IP="10.0.0.151"  # Container DHCP range starts at 150
 DEFAULT_BRIDGE="ovsbr0"             # OVS bridge, not Linux bridge
@@ -30,6 +30,10 @@ DEFAULT_ROOTPW=""
 DEFAULT_MEMORY="2048"
 DEFAULT_DISK="8"
 DEFAULT_CORES="2"
+
+# Dual IP configuration (to be configured when second IP is available)
+DEFAULT_ENABLE_DUAL_IP="false"     # Set to true when second IP available
+DEFAULT_PUBLIC_IP=""               # Second public IP for direct container access
 
 # Utility functions
 print_status() {
@@ -181,13 +185,38 @@ get_configuration() {
     read -p "Template [$DEFAULT_TEMPLATE]: " template
     TEMPLATE="${template:-$DEFAULT_TEMPLATE}"
     
+    # Dual IP configuration
+    echo
+    print_info "Dual IP Configuration (for commercial deployment)"
+    print_question "Enable dual IP setup? (Requires second public IP) [y/N]:"
+    read -p "> " enable_dual_ip
+    if [[ "$enable_dual_ip" =~ ^[Yy]$ ]]; then
+        ENABLE_DUAL_IP="true"
+        print_question "Enter second public IP for direct container access:"
+        read -p "Public IP: " public_ip
+        PUBLIC_IP="$public_ip"
+        print_question "Enter public gateway:"
+        read -p "Public Gateway: " public_gateway
+        PUBLIC_GATEWAY="$public_gateway"
+    else
+        ENABLE_DUAL_IP="false"
+        print_info "Single IP mode - Netmaker will be proxied through nginx"
+    fi
+    
     echo
     print_info "Container configuration:"
     echo "  • ID: $CONTAINER_ID"
     echo "  • Hostname: $HOSTNAME"
-    echo "  • IP: $CONTAINER_IP"
+    echo "  • Private IP: $CONTAINER_IP"
     echo "  • Bridge: $BRIDGE"
     echo "  • Gateway: $GATEWAY"
+    if [[ "$ENABLE_DUAL_IP" == "true" ]]; then
+        echo "  • Public IP: $PUBLIC_IP (direct access)"
+        echo "  • Public Gateway: $PUBLIC_GATEWAY"
+        echo "  • Mode: Dual IP (commercial setup)"
+    else
+        echo "  • Mode: Single IP (proxied through nginx)"
+    fi
     echo "  • Memory: ${MEMORY}MB"
     echo "  • Disk: ${DISK}GB"
     echo "  • Cores: $CORES"
@@ -265,7 +294,17 @@ create_container() {
     create_cmd="$create_cmd --cores $CORES"
     create_cmd="$create_cmd --storage $STORAGE"
     create_cmd="$create_cmd --rootfs $STORAGE:$DISK"
+    
+    # Network configuration - private network always on eth0
     create_cmd="$create_cmd --net0 name=eth0,bridge=$BRIDGE,ip=$CONTAINER_IP,gw=$GATEWAY"
+    
+    # Add second network interface for dual IP setup
+    if [[ "$ENABLE_DUAL_IP" == "true" ]]; then
+        print_info "Configuring dual IP setup with direct public access"
+        create_cmd="$create_cmd --net1 name=eth1,bridge=$BRIDGE,ip=$PUBLIC_IP,gw=$PUBLIC_GATEWAY"
+        print_status "Added public interface: eth1 ($PUBLIC_IP)"
+    fi
+    
     create_cmd="$create_cmd --nameserver 8.8.8.8"
     create_cmd="$create_cmd --nameserver 8.8.4.4"
     create_cmd="$create_cmd --features nesting=1"
