@@ -1,0 +1,111 @@
+# Netmaker Non-Containerized GO Stack - Git Ignore File
+
+# Installation artifacts
+*.log
+ghostbridge-config-*.conf
+remove-dummy.sh
+
+# Backup files
+*.backup
+*.backup-*
+*.orig
+
+# Configuration files with sensitive data
+config.yaml
+mosquitto.conf
+nginx-netmaker.conf
+*.pem
+*.key
+*.crt
+
+# Runtime files
+*.pid
+*.sock
+*.lock
+
+# Data directories
+data/
+logs/
+
+# Temporary files
+tmp/
+temp/
+.tmp/
+
+# System files
+.DS_Store
+.DS_Store?
+._*
+.Spotlight-V100
+.Trashes
+ehthumbs.db
+Thumbs.db
+
+# IDE files
+.vscode/
+.idea/
+*.swp
+*.swo
+*~
+
+# Local environment files
+.env
+.env.local
+.env.*.local
+
+# Certificates and keys
+*.csr
+*.p12
+*.pfx
+fullchain.pem
+privkey.pem
+chain.pem
+cert.pem
+
+# Database files
+*.db
+*.sqlite
+*.sqlite3
+
+# Compressed files
+*.zip
+*.tar.gz
+*.tar.bz2
+*.rar
+
+# Package files
+*.deb
+*.rpm
+
+# Binary files
+netmaker
+netclient
+
+# SSH keys
+id_rsa
+id_rsa.pub
+id_ed25519
+id_ed25519.pub
+
+# Local test files
+test-*
+*-test
+testing/
+
+# Node modules (if any frontend components)
+node_modules/
+npm-debug.log*
+
+# Python cache (if any Python scripts)
+__pycache__/
+*.py[cod]
+*$py.class
+
+# Go build artifacts (if building from source)
+*.o
+*.so
+*.exe
+
+# Documentation build artifacts
+docs/_build/
+site/
