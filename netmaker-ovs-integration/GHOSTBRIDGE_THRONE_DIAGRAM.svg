@@ -1,0 +1,180 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<svg width="1200" height="800" xmlns="http://www.w3.org/2000/svg">
+  <defs>
+    <!-- Gradients for Game of Thrones styling -->
+    <linearGradient id="ironGradient" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" style="stop-color:#2c3e50;stop-opacity:1" />
+      <stop offset="100%" style="stop-color:#34495e;stop-opacity:1" />
+    </linearGradient>
+    
+    <linearGradient id="fireGradient" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" style="stop-color:#e74c3c;stop-opacity:1" />
+      <stop offset="100%" style="stop-color:#c0392b;stop-opacity:1" />
+    </linearGradient>
+    
+    <linearGradient id="iceGradient" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" style="stop-color:#3498db;stop-opacity:1" />
+      <stop offset="100%" style="stop-color:#2980b9;stop-opacity:1" />
+    </linearGradient>
+    
+    <linearGradient id="goldGradient" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" style="stop-color:#f39c12;stop-opacity:1" />
+      <stop offset="100%" style="stop-color:#e67e22;stop-opacity:1" />
+    </linearGradient>
+    
+    <!-- Glow effects -->
+    <filter id="glow">
+      <feGaussianBlur stdDeviation="3" result="coloredBlur"/>
+      <feMerge> 
+        <feMergeNode in="coloredBlur"/>
+        <feMergeNode in="SourceGraphic"/>
+      </feMerge>
+    </filter>
+    
+    <!-- Drop shadow -->
+    <filter id="shadow" x="-50%" y="-50%" width="200%" height="200%">
+      <feDropShadow dx="2" dy="2" stdDeviation="3" flood-color="#000" flood-opacity="0.3"/>
+    </filter>
+  </defs>
+  
+  <!-- Background with parchment texture -->
+  <rect width="1200" height="800" fill="#f4f1e8"/>
+  
+  <!-- Title Banner -->
+  <rect x="200" y="20" width="800" height="80" fill="url(#ironGradient)" rx="10" filter="url(#shadow)"/>
+  <text x="600" y="45" text-anchor="middle" font-family="serif" font-size="24" font-weight="bold" fill="#ecf0f1">GHOSTBRIDGE NETWORK REALM</text>
+  <text x="600" y="75" text-anchor="middle" font-family="serif" font-size="16" fill="#bdc3c7">The Architecture of Houses</text>
+  
+  <!-- The Iron Throne (Proxmox Host) -->
+  <g id="ironThrone">
+    <rect x="450" y="120" width="300" height="180" fill="url(#ironGradient)" rx="15" filter="url(#shadow)"/>
+    <polygon points="470,120 500,90 700,90 730,120" fill="url(#ironGradient)" filter="url(#shadow)"/>
+    
+    <!-- Throne details -->
+    <rect x="460" y="130" width="20" height="160" fill="#1a252f"/>
+    <rect x="720" y="130" width="20" height="160" fill="#1a252f"/>
+    <circle cx="600" cy="200" r="30" fill="url(#goldGradient)" filter="url(#glow)"/>
+    
+    <text x="600" y="150" text-anchor="middle" font-family="serif" font-size="18" font-weight="bold" fill="#ecf0f1">THE IRON THRONE</text>
+    <text x="600" y="170" text-anchor="middle" font-family="serif" font-size="14" fill="#bdc3c7">Proxmox VE Host</text>
+    <text x="600" y="190" text-anchor="middle" font-family="monospace" font-size="12" fill="#e67e22">80.209.240.244</text>
+    
+    <!-- OVS Bridge representation -->
+    <text x="600" y="220" text-anchor="middle" font-family="serif" font-size="12" fill="#ecf0f1">ovsbr0 - The Royal Bridge</text>
+    <text x="600" y="240" text-anchor="middle" font-family="monospace" font-size="10" fill="#95a5a6">ovsbr0-public | ovsbr0-private</text>
+    <text x="600" y="260" text-anchor="middle" font-family="monospace" font-size="10" fill="#95a5a6">Gateway: 10.0.0.1/24</text>
+    <text x="600" y="280" text-anchor="middle" font-family="serif" font-size="10" fill="#f39c12">⚔️ Nginx • Proxmox UI • Stream Module ⚔️</text>
+  </g>
+  
+  <!-- The Night's Watch (Netmaker Container) -->
+  <g id="nightsWatch">
+    <rect x="150" y="400" width="280" height="150" fill="url(#iceGradient)" rx="10" filter="url(#shadow)"/>
+    
+    <!-- Castle battlements -->
+    <rect x="160" y="380" width="20" height="30" fill="url(#iceGradient)"/>
+    <rect x="190" y="375" width="20" height="35" fill="url(#iceGradient)"/>
+    <rect x="220" y="380" width="20" height="30" fill="url(#iceGradient)"/>
+    <rect x="380" y="380" width="20" height="30" fill="url(#iceGradient)"/>
+    <rect x="410" y="375" width="20" height="35" fill="url(#iceGradient)"/>
+    
+    <text x="290" y="425" text-anchor="middle" font-family="serif" font-size="16" font-weight="bold" fill="#ecf0f1">THE NIGHT'S WATCH</text>
+    <text x="290" y="445" text-anchor="middle" font-family="serif" font-size="12" fill="#bdc3c7">Netmaker LXC Container</text>
+    <text x="290" y="465" text-anchor="middle" font-family="monospace" font-size="11" fill="#e8f4fd">eth0: 10.0.0.151/24</text>
+    <text x="290" y="480" text-anchor="middle" font-family="monospace" font-size="11" fill="#e8f4fd">eth1: 80.209.240.245/25</text>
+    
+    <text x="290" y="505" text-anchor="middle" font-family="serif" font-size="11" fill="#ecf0f1">Guardians of the Mesh</text>
+    <text x="290" y="525" text-anchor="middle" font-family="serif" font-size="10" fill="#3498db">❄️ Netmaker API • MQTT • WireGuard ❄️</text>
+  </g>
+  
+  <!-- Winterfell (Home Server) -->
+  <g id="winterfell">
+    <rect x="770" y="400" width="280" height="150" fill="url(#ironGradient)" rx="10" filter="url(#shadow)"/>
+    
+    <!-- Winterfell towers -->
+    <circle cx="820" cy="390" r="15" fill="url(#ironGradient)"/>
+    <circle cx="870" cy="385" r="18" fill="url(#ironGradient)"/>
+    <circle cx="920" cy="390" r="15" fill="url(#ironGradient)"/>
+    <circle cx="1000" cy="390" r="15" fill="url(#ironGradient)"/>
+    
+    <text x="910" y="425" text-anchor="middle" font-family="serif" font-size="16" font-weight="bold" fill="#ecf0f1">WINTERFELL</text>
+    <text x="910" y="445" text-anchor="middle" font-family="serif" font-size="12" fill="#bdc3c7">Home Server Stronghold</text>
+    <text x="910" y="465" text-anchor="middle" font-family="monospace" font-size="11" fill="#e8f4fd">mgmt-int: 10.88.88.2/24</text>
+    <text x="910" y="480" text-anchor="middle" font-family="monospace" font-size="11" fill="#e8f4fd">nm-int: 100.104.70.2/24</text>
+    
+    <text x="910" y="505" text-anchor="middle" font-family="serif" font-size="11" fill="#ecf0f1">House of the North</text>
+    <text x="910" y="525" text-anchor="middle" font-family="serif" font-size="10" fill="#95a5a6">🐺 OVS Bridges • Mesh Endpoint 🐺</text>
+  </g>
+  
+  <!-- King's Landing (Router) -->
+  <g id="kingsLanding">
+    <rect x="450" y="600" width="300" height="120" fill="url(#goldGradient)" rx="10" filter="url(#shadow)"/>
+    
+    <!-- Crown on top -->
+    <polygon points="580,590 590,580 610,580 620,590 600,570 580,590" fill="url(#goldGradient)" filter="url(#glow)"/>
+    
+    <text x="600" y="635" text-anchor="middle" font-family="serif" font-size="16" font-weight="bold" fill="#2c3e50">KING'S LANDING</text>
+    <text x="600" y="655" text-anchor="middle" font-family="serif" font-size="12" fill="#34495e">Flint Router Realm</text>
+    <text x="600" y="675" text-anchor="middle" font-family="monospace" font-size="11" fill="#2c3e50">Gateway: 10.88.88.1/24</text>
+    <text x="600" y="695" text-anchor="middle" font-family="serif" font-size="10" fill="#e67e22">👑 DHCP Authority • Routing Decree 👑</text>
+  </g>
+  
+  <!-- Network Connections (Ravens/Messages) -->
+  <g id="connections">
+    <!-- Iron Throne to Night's Watch -->
+    <line x1="550" y1="300" x2="350" y2="400" stroke="#e74c3c" stroke-width="3" stroke-dasharray="10,5" filter="url(#glow)"/>
+    <text x="450" y="345" font-family="serif" font-size="10" fill="#e74c3c">🔥 ovsbr0 Private Bridge</text>
+    <text x="450" y="360" font-family="monospace" font-size="9" fill="#c0392b">10.0.0.0/24 Network</text>
+    
+    <!-- Iron Throne to Winterfell -->
+    <line x1="650" y1="300" x2="850" y2="400" stroke="#27ae60" stroke-width="3" stroke-dasharray="10,5" filter="url(#glow)"/>
+    <text x="750" y="345" font-family="serif" font-size="10" fill="#27ae60">🌿 WireGuard Mesh</text>
+    <text x="750" y="360" font-family="monospace" font-size="9" fill="#2ecc71">100.104.70.0/24 Overlay</text>
+    
+    <!-- King's Landing to all -->
+    <line x1="550" y1="600" x2="500" y2="300" stroke="#f39c12" stroke-width="2" stroke-dasharray="5,5"/>
+    <line x1="650" y1="600" x2="700" y2="300" stroke="#f39c12" stroke-width="2" stroke-dasharray="5,5"/>
+    <line x1="700" y1="650" x2="850" y2="550" stroke="#f39c12" stroke-width="2" stroke-dasharray="5,5"/>
+    
+    <!-- Internet connection -->
+    <line x1="600" y1="120" x2="600" y2="80" stroke="#9b59b6" stroke-width="4" filter="url(#glow)"/>
+    <text x="620" y="100" font-family="serif" font-size="12" fill="#9b59b6">⚡ Internet Realm ⚡</text>
+  </g>
+  
+  <!-- Legend/Houses Banner -->
+  <g id="legend">
+    <rect x="50" y="120" width="200" height="200" fill="#ecf0f1" stroke="#34495e" stroke-width="2" rx="5" filter="url(#shadow)"/>
+    <text x="150" y="145" text-anchor="middle" font-family="serif" font-size="14" font-weight="bold" fill="#2c3e50">HOUSES & DOMAINS</text>
+    
+    <circle cx="70" cy="170" r="8" fill="url(#ironGradient)"/>
+    <text x="90" y="175" font-family="serif" font-size="11" fill="#2c3e50">House Proxmox - The Rulers</text>
+    
+    <circle cx="70" cy="195" r="8" fill="url(#iceGradient)"/>
+    <text x="90" y="200" font-family="serif" font-size="11" fill="#2c3e50">House Netmaker - The Guardians</text>
+    
+    <circle cx="70" cy="220" r="8" fill="url(#ironGradient)"/>
+    <text x="90" y="225" font-family="serif" font-size="11" fill="#2c3e50">House Winterfell - The North</text>
+    
+    <circle cx="70" cy="245" r="8" fill="url(#goldGradient)"/>
+    <text x="90" y="250" font-family="serif" font-size="11" fill="#2c3e50">House Router - The Gateway</text>
+    
+    <line x1="70" y1="270" x2="230" y2="270" stroke="#e74c3c" stroke-width="2"/>
+    <text x="90" y="285" font-family="serif" font-size="10" fill="#2c3e50">Private Networks</text>
+    
+    <line x1="70" y1="295" x2="230" y2="295" stroke="#27ae60" stroke-width="2"/>
+    <text x="90" y="310" font-family="serif" font-size="10" fill="#2c3e50">Mesh Overlay</text>
+  </g>
+  
+  <!-- Service Banners -->
+  <g id="services">
+    <!-- Dual IP Banner -->
+    <rect x="900" y="120" width="250" height="100" fill="url(#fireGradient)" rx="5" filter="url(#shadow)"/>
+    <text x="1025" y="145" text-anchor="middle" font-family="serif" font-size="14" font-weight="bold" fill="#ecf0f1">DUAL IP DOMINION</text>
+    <text x="1025" y="165" text-anchor="middle" font-family="monospace" font-size="11" fill="#f8f9fa">IP1: 80.209.240.244</text>
+    <text x="1025" y="180" text-anchor="middle" font-family="serif" font-size="10" fill="#f8f9fa">GhostBridge Control</text>
+    <text x="1025" y="200" text-anchor="middle" font-family="monospace" font-size="11" fill="#f8f9fa">IP2: 80.209.240.245</text>
+    <text x="1025" y="215" text-anchor="middle" font-family="serif" font-size="10" fill="#f8f9fa">Netmaker Direct</text>
+  </g>
+  
+  <!-- Footer -->
+  <text x="600" y="780" text-anchor="middle" font-family="serif" font-size="12" fill="#7f8c8d">"When you play the game of networks, you win or you disconnect."</text>
+</svg>

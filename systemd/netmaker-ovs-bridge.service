@@ -1,0 +1,24 @@
+[Unit]
+Description=Netmaker OpenVSwitch Integration Service
+Documentation=file:///usr/share/doc/netmaker-ovs-integration/README.md
+# Start after network is up, OVS is running, and Netmaker client has started.
+After=network-online.target openvswitch-switch.service netmaker.service wg-quick@netmaker.service
+Wants=network-online.target openvswitch-switch.service netmaker.service
+
+# Adjust 'netmaker.service' to the actual service name of your Netmaker client
+# if different (e.g., netclient.service or a specific wg-quick@<interface>.service).
+# Using wg-quick@netmaker.service as an example if netmaker interface is 'netmaker'.
+
+[Service]
+Type=oneshot
+RemainAfterExit=yes
+
+# Path to scripts will be /usr/local/bin/ as per install.sh
+ExecStart=/usr/local/bin/netmaker-ovs-bridge-add.sh
+ExecStop=/usr/local/bin/netmaker-ovs-bridge-remove.sh
+
+StandardOutput=journal
+StandardError=journal
+
+[Install]
+WantedBy=multi-user.target

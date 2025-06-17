@@ -1,0 +1,923 @@
+Jun 17 03:38:24 ghostbridge systemd-journald[49]: Journal started
+Jun 17 03:38:24 ghostbridge systemd-journald[49]: Runtime Journal (/run/log/journal/2f848b4802c64a71bb95ef0a46c51b4b) is 8.0M, max 319.1M, 311.1M free.
+Jun 17 03:38:24 ghostbridge systemd[1]: Finished systemd-sysctl.service - Apply Kernel Variables.
+Jun 17 03:38:24 ghostbridge systemd[1]: Starting systemd-journal-flush.service - Flush Journal to Persistent Storage...
+Jun 17 03:38:24 ghostbridge systemd[1]: Finished systemd-firstboot.service - First Boot Wizard.
+Jun 17 03:38:24 ghostbridge systemd[1]: Reached target first-boot-complete.target - First Boot Complete.
+Jun 17 03:38:24 ghostbridge systemd[1]: Starting systemd-sysusers.service - Create System Users...
+Jun 17 03:38:24 ghostbridge systemd-journald[49]: Time spent on flushing to /var/log/journal/2f848b4802c64a71bb95ef0a46c51b4b is 1.100ms for 7 entries.
+Jun 17 03:38:24 ghostbridge systemd-journald[49]: System Journal (/var/log/journal/2f848b4802c64a71bb95ef0a46c51b4b) is 8.0M, max 1.9G, 1.9G free.
+Jun 17 03:38:24 ghostbridge systemd[1]: Finished systemd-journal-flush.service - Flush Journal to Persistent Storage.
+Jun 17 03:38:24 ghostbridge systemd[1]: Finished systemd-sysusers.service - Create System Users.
+Jun 17 03:38:24 ghostbridge systemd[1]: Starting systemd-tmpfiles-setup-dev.service - Create Static Device Nodes in /dev...
+Jun 17 03:38:24 ghostbridge systemd[1]: Finished systemd-tmpfiles-setup-dev.service - Create Static Device Nodes in /dev.
+Jun 17 03:38:24 ghostbridge systemd[1]: Reached target local-fs-pre.target - Preparation for Local File Systems.
+Jun 17 03:38:24 ghostbridge systemd[1]: Reached target local-fs.target - Local File Systems.
+Jun 17 03:38:24 ghostbridge systemd[1]: Starting networking.service - Raise network interfaces...
+Jun 17 03:38:24 ghostbridge systemd[1]: systemd-binfmt.service - Set Up Additional Binary Formats was skipped because of an unmet condition check (ConditionPathIsMountPoint=/proc/sys/fs/binfmt_misc).
+Jun 17 03:38:24 ghostbridge systemd[1]: Starting systemd-machine-id-commit.service - Commit a transient machine-id on disk...
+Jun 17 03:38:24 ghostbridge systemd[1]: systemd-sysext.service - Merge System Extension Images into /usr/ and /opt/ was skipped because no trigger condition checks were met.
+Jun 17 03:38:24 ghostbridge systemd[1]: Starting systemd-tmpfiles-setup.service - Create System Files and Directories...
+Jun 17 03:38:24 ghostbridge systemd[1]: systemd-udevd.service - Rule-based Manager for Device Events and Files was skipped because of an unmet condition check (ConditionPathIsReadWrite=/sys).
+Jun 17 03:38:24 ghostbridge systemd[1]: Finished systemd-tmpfiles-setup.service - Create System Files and Directories.
+Jun 17 03:38:24 ghostbridge systemd[1]: systemd-timesyncd.service - Network Time Synchronization was skipped because of an unmet condition check (ConditionVirtualization=!container).
+Jun 17 03:38:24 ghostbridge systemd[1]: Reached target time-set.target - System Time Set.
+Jun 17 03:38:24 ghostbridge systemd[1]: Starting systemd-update-utmp.service - Record System Boot/Shutdown in UTMP...
+Jun 17 03:38:24 ghostbridge systemd[1]: Finished systemd-machine-id-commit.service - Commit a transient machine-id on disk.
+Jun 17 03:38:24 ghostbridge systemd[1]: Finished systemd-update-utmp.service - Record System Boot/Shutdown in UTMP.
+Jun 17 03:38:24 ghostbridge systemd[1]: Reached target sysinit.target - System Initialization.
+Jun 17 03:38:24 ghostbridge systemd[1]: Started postfix-resolvconf.path - Watch for resolv.conf updates and restart postfix.
+Jun 17 03:38:24 ghostbridge systemd[1]: Started apt-daily.timer - Daily apt download activities.
+Jun 17 03:38:24 ghostbridge systemd[1]: Started apt-daily-upgrade.timer - Daily apt upgrade and clean activities.
+Jun 17 03:38:24 ghostbridge systemd[1]: Started dpkg-db-backup.timer - Daily dpkg database backup timer.
+Jun 17 03:38:24 ghostbridge systemd[1]: Started e2scrub_all.timer - Periodic ext4 Online Metadata Check for All Filesystems.
+Jun 17 03:38:24 ghostbridge systemd[1]: fstrim.timer - Discard unused blocks once a week was skipped because of an unmet condition check (ConditionVirtualization=!container).
+Jun 17 03:38:24 ghostbridge systemd[1]: Started logrotate.timer - Daily rotation of log files.
+Jun 17 03:38:24 ghostbridge systemd[1]: Started man-db.timer - Daily man-db regeneration.
+Jun 17 03:38:24 ghostbridge systemd[1]: Started systemd-tmpfiles-clean.timer - Daily Cleanup of Temporary Directories.
+Jun 17 03:38:24 ghostbridge systemd[1]: Reached target paths.target - Path Units.
+Jun 17 03:38:24 ghostbridge systemd[1]: Reached target timers.target - Timer Units.
+Jun 17 03:38:24 ghostbridge systemd[1]: Listening on dbus.socket - D-Bus System Message Bus Socket.
+Jun 17 03:38:24 ghostbridge systemd[1]: Listening on ssh.socket - OpenBSD Secure Shell server socket.
+Jun 17 03:38:24 ghostbridge systemd[1]: Reached target sockets.target - Socket Units.
+Jun 17 03:38:24 ghostbridge systemd[1]: Starting systemd-networkd.service - Network Configuration...
+Jun 17 03:38:24 ghostbridge systemd[1]: systemd-pcrphase-sysinit.service - TPM2 PCR Barrier (Initialization) was skipped because of an unmet condition check (ConditionPathExists=/sys/firmware/efi/efivars/StubPcrKernelImage-4a67b082-0a4c-41cf-b6c7-440b29bb8c4f).
+Jun 17 03:38:24 ghostbridge systemd[1]: Reached target basic.target - Basic System.
+Jun 17 03:38:24 ghostbridge systemd[1]: Started cron.service - Regular background program processing daemon.
+Jun 17 03:38:24 ghostbridge systemd[1]: Starting dbus.service - D-Bus System Message Bus...
+Jun 17 03:38:24 ghostbridge cron[98]: (CRON) INFO (pidfile fd = 3)
+Jun 17 03:38:24 ghostbridge systemd[1]: Starting e2scrub_reap.service - Remove Stale Online ext4 Metadata Check Snapshots...
+Jun 17 03:38:24 ghostbridge cron[98]: (CRON) INFO (Running @reboot jobs)
+Jun 17 03:38:24 ghostbridge systemd[1]: getty-static.service - getty on tty2-tty6 if dbus and logind are not available was skipped because of an unmet condition check (ConditionPathExists=!/usr/bin/dbus-daemon).
+Jun 17 03:38:24 ghostbridge systemd[1]: Started postfix-resolvconf.service - Copies updated resolv.conf to postfix chroot and restarts postfix..
+Jun 17 03:38:24 ghostbridge systemd[1]: Starting systemd-logind.service - User Login Management...
+Jun 17 03:38:24 ghostbridge systemd[1]: systemd-pcrphase.service - TPM2 PCR Barrier (User) was skipped because of an unmet condition check (ConditionPathExists=/sys/firmware/efi/efivars/StubPcrKernelImage-4a67b082-0a4c-41cf-b6c7-440b29bb8c4f).
+Jun 17 03:38:24 ghostbridge systemd[1]: Started dbus.service - D-Bus System Message Bus.
+Jun 17 03:38:24 ghostbridge systemd[1]: postfix-resolvconf.service: Deactivated successfully.
+Jun 17 03:38:24 ghostbridge systemd-networkd[96]: Failed to increase receive buffer size for general netlink socket, ignoring: Operation not permitted
+Jun 17 03:38:24 ghostbridge systemd-networkd[96]: eth0: Link UP
+Jun 17 03:38:24 ghostbridge systemd-networkd[96]: eth0: Gained carrier
+Jun 17 03:38:24 ghostbridge systemd-networkd[96]: lo: Link UP
+Jun 17 03:38:24 ghostbridge systemd-networkd[96]: lo: Gained carrier
+Jun 17 03:38:24 ghostbridge systemd-networkd[96]: Enumeration completed
+Jun 17 03:38:24 ghostbridge systemd-networkd[96]: eth0: Lost carrier
+Jun 17 03:38:24 ghostbridge systemd-networkd[96]: eth0: Gained carrier
+Jun 17 03:38:24 ghostbridge systemd-logind[105]: New seat seat0.
+Jun 17 03:38:24 ghostbridge systemd[1]: Started systemd-networkd.service - Network Configuration.
+Jun 17 03:38:24 ghostbridge systemd[1]: Finished networking.service - Raise network interfaces.
+Jun 17 03:38:24 ghostbridge systemd[1]: Reached target network.target - Network.
+Jun 17 03:38:24 ghostbridge systemd[1]: Starting ssh.service - OpenBSD Secure Shell server...
+Jun 17 03:38:24 ghostbridge systemd[1]: Starting systemd-user-sessions.service - Permit User Sessions...
+Jun 17 03:38:24 ghostbridge systemd[1]: Finished systemd-user-sessions.service - Permit User Sessions.
+Jun 17 03:38:24 ghostbridge systemd[1]: Started systemd-logind.service - User Login Management.
+Jun 17 03:38:24 ghostbridge systemd[1]: Started console-getty.service - Console Getty.
+Jun 17 03:38:24 ghostbridge systemd[1]: Started container-getty@1.service - Container Getty on /dev/tty1.
+Jun 17 03:38:24 ghostbridge systemd[1]: Started container-getty@2.service - Container Getty on /dev/tty2.
+Jun 17 03:38:24 ghostbridge systemd[1]: Reached target getty.target - Login Prompts.
+Jun 17 03:38:24 ghostbridge systemd[1]: e2scrub_reap.service: Deactivated successfully.
+Jun 17 03:38:24 ghostbridge systemd[1]: Finished e2scrub_reap.service - Remove Stale Online ext4 Metadata Check Snapshots.
+Jun 17 03:38:24 ghostbridge sshd[124]: Server listening on :: port 22.
+Jun 17 03:38:24 ghostbridge systemd[1]: Started ssh.service - OpenBSD Secure Shell server.
+Jun 17 03:38:25 ghostbridge systemd[1]: etc-machine\x2did.mount: Deactivated successfully.
+Jun 17 03:38:25 ghostbridge systemd[1]: Finished ifupdown-wait-online.service - Wait for network to be configured by ifupdown.
+Jun 17 03:38:25 ghostbridge systemd[1]: Reached target network-online.target - Network is Online.
+Jun 17 03:38:25 ghostbridge systemd[1]: Starting postfix@-.service - Postfix Mail Transport Agent (instance -)...
+Jun 17 03:38:25 ghostbridge postfix[181]: Postfix is using backwards-compatible default settings
+Jun 17 03:38:25 ghostbridge postfix[181]: See http://www.postfix.org/COMPATIBILITY_README.html for details
+Jun 17 03:38:25 ghostbridge postfix[181]: To disable backwards compatibility use "postconf compatibility_level=3.6" and "postfix reload"
+Jun 17 03:38:25 ghostbridge postfix/postfix-script[278]: starting the Postfix mail system
+Jun 17 03:38:25 ghostbridge postfix/master[280]: daemon started -- version 3.7.11, configuration /etc/postfix
+Jun 17 03:38:25 ghostbridge systemd[1]: Started postfix@-.service - Postfix Mail Transport Agent (instance -).
+Jun 17 03:38:25 ghostbridge systemd[1]: Starting postfix.service - Postfix Mail Transport Agent...
+Jun 17 03:38:25 ghostbridge systemd[1]: Finished postfix.service - Postfix Mail Transport Agent.
+Jun 17 03:38:25 ghostbridge systemd[1]: Reached target multi-user.target - Multi-User System.
+Jun 17 03:38:25 ghostbridge systemd[1]: Reached target graphical.target - Graphical Interface.
+Jun 17 03:38:25 ghostbridge systemd[1]: Starting systemd-update-utmp-runlevel.service - Record Runlevel Change in UTMP...
+Jun 17 03:38:25 ghostbridge systemd[1]: systemd-update-utmp-runlevel.service: Deactivated successfully.
+Jun 17 03:38:25 ghostbridge systemd[1]: Finished systemd-update-utmp-runlevel.service - Record Runlevel Change in UTMP.
+Jun 17 03:38:25 ghostbridge systemd[1]: Startup finished in 1.490s.
+Jun 17 03:38:25 ghostbridge systemd-networkd[96]: eth0: Gained IPv6LL
+Jun 17 03:38:29 ghostbridge dbus-daemon[100]: [system] Reloaded configuration
+Jun 17 03:38:29 ghostbridge dbus-daemon[100]: [system] Reloaded configuration
+Jun 17 03:38:29 ghostbridge dbus-daemon[100]: [system] Reloaded configuration
+Jun 17 03:38:29 ghostbridge dbus-daemon[100]: [system] Reloaded configuration
+Jun 17 03:38:29 ghostbridge dbus-daemon[100]: [system] Reloaded configuration
+Jun 17 03:38:29 ghostbridge dbus-daemon[100]: [system] Reloaded configuration
+Jun 17 03:38:29 ghostbridge dbus-daemon[100]: [system] Reloaded configuration
+Jun 17 03:38:29 ghostbridge dbus-daemon[100]: [system] Reloaded configuration
+Jun 17 03:38:29 ghostbridge dbus-daemon[100]: [system] Reloaded configuration
+Jun 17 03:38:29 ghostbridge dbus-daemon[100]: [system] Reloaded configuration
+Jun 17 03:38:29 ghostbridge dbus-daemon[100]: [system] Reloaded configuration
+Jun 17 03:38:29 ghostbridge dbus-daemon[100]: [system] Reloaded configuration
+Jun 17 03:38:29 ghostbridge dbus-daemon[100]: [system] Reloaded configuration
+Jun 17 03:38:29 ghostbridge systemd[1]: Reexecuting.
+Jun 17 03:38:29 ghostbridge systemd[1]: Stopping systemd-networkd.service - Network Configuration...
+Jun 17 03:38:29 ghostbridge systemd[1]: systemd-networkd.service: Deactivated successfully.
+Jun 17 03:38:29 ghostbridge systemd[1]: Stopped systemd-networkd.service - Network Configuration.
+Jun 17 03:38:29 ghostbridge systemd[1]: Starting systemd-networkd.service - Network Configuration...
+Jun 17 03:38:29 ghostbridge systemd-networkd[1861]: Failed to increase receive buffer size for general netlink socket, ignoring: Operation not permitted
+Jun 17 03:38:29 ghostbridge systemd-networkd[1861]: eth0: Link UP
+Jun 17 03:38:29 ghostbridge systemd-networkd[1861]: eth0: Gained carrier
+Jun 17 03:38:29 ghostbridge systemd-networkd[1861]: lo: Link UP
+Jun 17 03:38:29 ghostbridge systemd-networkd[1861]: lo: Gained carrier
+Jun 17 03:38:29 ghostbridge systemd-networkd[1861]: eth0: Gained IPv6LL
+Jun 17 03:38:29 ghostbridge systemd-networkd[1861]: Enumeration completed
+Jun 17 03:38:29 ghostbridge systemd[1]: Started systemd-networkd.service - Network Configuration.
+Jun 17 03:38:29 ghostbridge systemd-journald[49]: Journal stopped
+Jun 17 03:38:30 ghostbridge systemd-journald[1865]: Journal started
+Jun 17 03:38:30 ghostbridge systemd-journald[1865]: System Journal (/var/log/journal/2f848b4802c64a71bb95ef0a46c51b4b) is 8.0M, max 1.9G, 1.9G free.
+Jun 17 03:38:31 ghostbridge systemd[1]: Reloading.
+Jun 17 03:38:31 ghostbridge systemd[1]: systemd-timesyncd.service - Network Time Synchronization was skipped because of an unmet condition check (ConditionVirtualization=!container).
+Jun 17 03:38:31 ghostbridge systemd[1]: Reloading.
+Jun 17 03:38:31 ghostbridge systemd[1]: systemd-udevd-control.socket - udev Control Socket was skipped because of an unmet condition check (ConditionPathIsReadWrite=/sys).
+Jun 17 03:38:31 ghostbridge systemd[1]: systemd-udevd-kernel.socket - udev Kernel Socket was skipped because of an unmet condition check (ConditionPathIsReadWrite=/sys).
+Jun 17 03:38:31 ghostbridge systemd[1]: systemd-udevd.service - Rule-based Manager for Device Events and Files was skipped because of an unmet condition check (ConditionPathIsReadWrite=/sys).
+Jun 17 03:38:31 ghostbridge systemd[1]: Reloading.
+Jun 17 03:38:34 ghostbridge dbus-daemon[100]: [system] Reloaded configuration
+Jun 17 03:38:44 ghostbridge groupadd[7884]: group added to /etc/group: name=emqx, GID=112
+Jun 17 03:38:44 ghostbridge groupadd[7884]: group added to /etc/gshadow: name=emqx
+Jun 17 03:38:44 ghostbridge groupadd[7884]: new group: name=emqx, GID=112
+Jun 17 03:38:44 ghostbridge useradd[7892]: new user: name=emqx, UID=103, GID=112, home=/var/lib/emqx, shell=/bin/bash, from=/dev/pts/4
+Jun 17 03:38:44 ghostbridge chfn[7899]: changed user 'emqx' information
+Jun 17 03:38:44 ghostbridge systemd[1]: Reloading.
+Jun 17 03:38:45 ghostbridge systemd[1]: Reloading.
+Jun 17 03:38:51 ghostbridge su[7980]: (to emqx) root on pts/3
+Jun 17 03:38:51 ghostbridge su[7980]: pam_unix(su-l:session): session opened for user emqx(uid=103) by (uid=0)
+Jun 17 03:38:51 ghostbridge su[7980]: pam_systemd(su-l:session): Failed to create session: Seat has no VTs but VT number not 0
+Jun 17 03:38:53 ghostbridge su[7980]: pam_unix(su-l:session): session closed for user emqx
+Jun 17 03:38:54 ghostbridge systemd[1]: Reloading.
+Jun 17 03:38:55 ghostbridge systemd[1]: Reloading.
+Jun 17 03:54:00 ghostbridge systemd[1]: Starting systemd-tmpfiles-clean.service - Cleanup of Temporary Directories...
+Jun 17 03:54:00 ghostbridge systemd[1]: systemd-tmpfiles-clean.service: Deactivated successfully.
+Jun 17 03:54:00 ghostbridge systemd[1]: Finished systemd-tmpfiles-clean.service - Cleanup of Temporary Directories.
+Jun 17 03:54:00 ghostbridge systemd[1]: run-credentials-systemd\x2dtmpfiles\x2dclean.service.mount: Deactivated successfully.
+-- Boot 880331c22bd54686a35d76887f00b152 --
+Jun 17 04:09:42 ghostbridge systemd-journald[50]: Journal started
+Jun 17 04:09:42 ghostbridge systemd-journald[50]: Runtime Journal (/run/log/journal/2f848b4802c64a71bb95ef0a46c51b4b) is 8.0M, max 319.1M, 311.1M free.
+Jun 17 04:09:42 ghostbridge systemd[1]: Starting systemd-journal-flush.service - Flush Journal to Persistent Storage...
+Jun 17 04:09:42 ghostbridge systemd[1]: Finished systemd-sysusers.service - Create System Users.
+Jun 17 04:09:42 ghostbridge systemd[1]: Finished systemd-sysctl.service - Apply Kernel Variables.
+Jun 17 04:09:42 ghostbridge systemd[1]: Starting systemd-tmpfiles-setup-dev.service - Create Static Device Nodes in /dev...
+Jun 17 04:09:42 ghostbridge systemd-journald[50]: Time spent on flushing to /var/log/journal/2f848b4802c64a71bb95ef0a46c51b4b is 7.310ms for 6 entries.
+Jun 17 04:09:42 ghostbridge systemd-journald[50]: System Journal (/var/log/journal/2f848b4802c64a71bb95ef0a46c51b4b) is 8.0M, max 1.9G, 1.9G free.
+Jun 17 04:09:42 ghostbridge systemd[1]: Finished systemd-tmpfiles-setup-dev.service - Create Static Device Nodes in /dev.
+Jun 17 04:09:42 ghostbridge systemd[1]: Reached target local-fs-pre.target - Preparation for Local File Systems.
+Jun 17 04:09:42 ghostbridge systemd[1]: Reached target local-fs.target - Local File Systems.
+Jun 17 04:09:42 ghostbridge systemd[1]: Starting networking.service - Raise network interfaces...
+Jun 17 04:09:42 ghostbridge systemd[1]: systemd-binfmt.service - Set Up Additional Binary Formats was skipped because of an unmet condition check (ConditionPathIsMountPoint=/proc/sys/fs/binfmt_misc).
+Jun 17 04:09:42 ghostbridge systemd[1]: systemd-machine-id-commit.service - Commit a transient machine-id on disk was skipped because of an unmet condition check (ConditionPathIsMountPoint=/etc/machine-id).
+Jun 17 04:09:42 ghostbridge systemd[1]: systemd-sysext.service - Merge System Extension Images into /usr/ and /opt/ was skipped because no trigger condition checks were met.
+Jun 17 04:09:42 ghostbridge systemd[1]: systemd-udevd.service - Rule-based Manager for Device Events and Files was skipped because of an unmet condition check (ConditionPathIsReadWrite=/sys).
+Jun 17 04:09:42 ghostbridge systemd[1]: Finished systemd-journal-flush.service - Flush Journal to Persistent Storage.
+Jun 17 04:09:42 ghostbridge systemd[1]: Starting systemd-tmpfiles-setup.service - Create System Files and Directories...
+Jun 17 04:09:42 ghostbridge systemd[1]: Starting systemd-networkd.service - Network Configuration...
+Jun 17 04:09:42 ghostbridge systemd[1]: Finished systemd-tmpfiles-setup.service - Create System Files and Directories.
+Jun 17 04:09:42 ghostbridge systemd[1]: systemd-timesyncd.service - Network Time Synchronization was skipped because of an unmet condition check (ConditionVirtualization=!container).
+Jun 17 04:09:42 ghostbridge systemd[1]: Reached target time-set.target - System Time Set.
+Jun 17 04:09:42 ghostbridge systemd[1]: Starting systemd-update-utmp.service - Record System Boot/Shutdown in UTMP...
+Jun 17 04:09:42 ghostbridge systemd[1]: Finished systemd-update-utmp.service - Record System Boot/Shutdown in UTMP.
+Jun 17 04:09:42 ghostbridge systemd[1]: Reached target sysinit.target - System Initialization.
+Jun 17 04:09:42 ghostbridge systemd[1]: Started postfix-resolvconf.path - Watch for resolv.conf updates and restart postfix.
+Jun 17 04:09:42 ghostbridge systemd[1]: Started apt-daily.timer - Daily apt download activities.
+Jun 17 04:09:42 ghostbridge systemd[1]: Started apt-daily-upgrade.timer - Daily apt upgrade and clean activities.
+Jun 17 04:09:42 ghostbridge systemd[1]: Started dpkg-db-backup.timer - Daily dpkg database backup timer.
+Jun 17 04:09:42 ghostbridge systemd[1]: Started e2scrub_all.timer - Periodic ext4 Online Metadata Check for All Filesystems.
+Jun 17 04:09:42 ghostbridge systemd[1]: fstrim.timer - Discard unused blocks once a week was skipped because of an unmet condition check (ConditionVirtualization=!container).
+Jun 17 04:09:42 ghostbridge systemd[1]: Started logrotate.timer - Daily rotation of log files.
+Jun 17 04:09:42 ghostbridge systemd[1]: Started man-db.timer - Daily man-db regeneration.
+Jun 17 04:09:42 ghostbridge systemd[1]: Started systemd-tmpfiles-clean.timer - Daily Cleanup of Temporary Directories.
+Jun 17 04:09:42 ghostbridge systemd[1]: Reached target paths.target - Path Units.
+Jun 17 04:09:42 ghostbridge systemd[1]: Reached target timers.target - Timer Units.
+Jun 17 04:09:42 ghostbridge systemd[1]: Listening on dbus.socket - D-Bus System Message Bus Socket.
+Jun 17 04:09:42 ghostbridge systemd[1]: Listening on ssh.socket - OpenBSD Secure Shell server socket.
+Jun 17 04:09:42 ghostbridge systemd[1]: Reached target sockets.target - Socket Units.
+Jun 17 04:09:42 ghostbridge systemd[1]: systemd-pcrphase-sysinit.service - TPM2 PCR Barrier (Initialization) was skipped because of an unmet condition check (ConditionPathExists=/sys/firmware/efi/efivars/StubPcrKernelImage-4a67b082-0a4c-41cf-b6c7-440b29bb8c4f).
+Jun 17 04:09:42 ghostbridge systemd[1]: Reached target basic.target - Basic System.
+Jun 17 04:09:42 ghostbridge systemd-networkd[89]: Failed to increase receive buffer size for general netlink socket, ignoring: Operation not permitted
+Jun 17 04:09:42 ghostbridge cron[106]: (CRON) INFO (pidfile fd = 3)
+Jun 17 04:09:42 ghostbridge systemd[1]: Started cron.service - Regular background program processing daemon.
+Jun 17 04:09:42 ghostbridge cron[106]: (CRON) INFO (Running @reboot jobs)
+Jun 17 04:09:42 ghostbridge systemd[1]: Starting dbus.service - D-Bus System Message Bus...
+Jun 17 04:09:42 ghostbridge systemd[1]: Starting e2scrub_reap.service - Remove Stale Online ext4 Metadata Check Snapshots...
+Jun 17 04:09:42 ghostbridge systemd[1]: getty-static.service - getty on tty2-tty6 if dbus and logind are not available was skipped because of an unmet condition check (ConditionPathExists=!/usr/bin/dbus-daemon).
+Jun 17 04:09:42 ghostbridge systemd[1]: Started postfix-resolvconf.service - Copies updated resolv.conf to postfix chroot and restarts postfix..
+Jun 17 04:09:42 ghostbridge systemd[1]: Starting systemd-logind.service - User Login Management...
+Jun 17 04:09:42 ghostbridge systemd[1]: systemd-pcrphase.service - TPM2 PCR Barrier (User) was skipped because of an unmet condition check (ConditionPathExists=/sys/firmware/efi/efivars/StubPcrKernelImage-4a67b082-0a4c-41cf-b6c7-440b29bb8c4f).
+Jun 17 04:09:42 ghostbridge systemd[1]: Started dbus.service - D-Bus System Message Bus.
+Jun 17 04:09:42 ghostbridge systemd-networkd[89]: eth0: Link UP
+Jun 17 04:09:42 ghostbridge systemd-networkd[89]: eth0: Gained carrier
+Jun 17 04:09:42 ghostbridge systemd-networkd[89]: lo: Link UP
+Jun 17 04:09:42 ghostbridge systemd-networkd[89]: lo: Gained carrier
+Jun 17 04:09:42 ghostbridge systemd-networkd[89]: Enumeration completed
+Jun 17 04:09:42 ghostbridge systemd-networkd[89]: eth0: Lost carrier
+Jun 17 04:09:42 ghostbridge systemd-networkd[89]: eth0: Gained carrier
+Jun 17 04:09:42 ghostbridge systemd[1]: Started systemd-networkd.service - Network Configuration.
+Jun 17 04:09:42 ghostbridge systemd[1]: postfix-resolvconf.service: Deactivated successfully.
+Jun 17 04:09:42 ghostbridge systemd[1]: e2scrub_reap.service: Deactivated successfully.
+Jun 17 04:09:42 ghostbridge systemd[1]: Finished e2scrub_reap.service - Remove Stale Online ext4 Metadata Check Snapshots.
+Jun 17 04:09:42 ghostbridge systemd-logind[111]: New seat seat0.
+Jun 17 04:09:42 ghostbridge systemd[1]: Started systemd-logind.service - User Login Management.
+Jun 17 04:09:42 ghostbridge systemd[1]: Finished networking.service - Raise network interfaces.
+Jun 17 04:09:42 ghostbridge systemd[1]: Reached target network.target - Network.
+Jun 17 04:09:42 ghostbridge systemd[1]: Started emqx.service - emqx daemon.
+Jun 17 04:09:42 ghostbridge systemd[1]: Starting ssh.service - OpenBSD Secure Shell server...
+Jun 17 04:09:42 ghostbridge systemd[1]: Starting systemd-user-sessions.service - Permit User Sessions...
+Jun 17 04:09:42 ghostbridge systemd[1]: Finished systemd-user-sessions.service - Permit User Sessions.
+Jun 17 04:09:42 ghostbridge systemd[1]: Started console-getty.service - Console Getty.
+Jun 17 04:09:42 ghostbridge systemd[1]: Started container-getty@1.service - Container Getty on /dev/tty1.
+Jun 17 04:09:42 ghostbridge systemd[1]: Started container-getty@2.service - Container Getty on /dev/tty2.
+Jun 17 04:09:42 ghostbridge systemd[1]: Reached target getty.target - Login Prompts.
+Jun 17 04:09:42 ghostbridge sshd[152]: Server listening on :: port 22.
+Jun 17 04:09:42 ghostbridge systemd[1]: Started ssh.service - OpenBSD Secure Shell server.
+Jun 17 04:09:43 ghostbridge bash[183]: [error]: {scan_error,#{line => 17,reason => "illegal characters \"/m\"",file => "/etc/emqx/emqx.conf"}}
+Jun 17 04:09:43 ghostbridge systemd[1]: Finished ifupdown-wait-online.service - Wait for network to be configured by ifupdown.
+Jun 17 04:09:43 ghostbridge systemd[1]: Reached target network-online.target - Network is Online.
+Jun 17 04:09:43 ghostbridge systemd[1]: Started netmaker.service - Netmaker Server.
+Jun 17 04:09:43 ghostbridge systemd[1]: Starting postfix@-.service - Postfix Mail Transport Agent (instance -)...
+Jun 17 04:09:43 ghostbridge netmaker[205]: flag provided but not defined: -config
+Jun 17 04:09:43 ghostbridge netmaker[205]: Usage of /usr/local/bin/netmaker:
+Jun 17 04:09:43 ghostbridge netmaker[205]:   -c string
+Jun 17 04:09:43 ghostbridge netmaker[205]:             absolute path to configuration file
+Jun 17 04:09:43 ghostbridge systemd[1]: netmaker.service: Main process exited, code=exited, status=2/INVALIDARGUMENT
+Jun 17 04:09:43 ghostbridge systemd[1]: netmaker.service: Failed with result 'exit-code'.
+Jun 17 04:09:43 ghostbridge postfix[260]: Postfix is using backwards-compatible default settings
+Jun 17 04:09:43 ghostbridge postfix[260]: See http://www.postfix.org/COMPATIBILITY_README.html for details
+Jun 17 04:09:43 ghostbridge postfix[260]: To disable backwards compatibility use "postconf compatibility_level=3.6" and "postfix reload"
+Jun 17 04:09:43 ghostbridge postfix/postfix-script[349]: starting the Postfix mail system
+Jun 17 04:09:43 ghostbridge postfix/master[351]: daemon started -- version 3.7.11, configuration /etc/postfix
+Jun 17 04:09:43 ghostbridge systemd[1]: Started postfix@-.service - Postfix Mail Transport Agent (instance -).
+Jun 17 04:09:43 ghostbridge systemd[1]: Starting postfix.service - Postfix Mail Transport Agent...
+Jun 17 04:09:43 ghostbridge systemd[1]: Finished postfix.service - Postfix Mail Transport Agent.
+Jun 17 04:09:43 ghostbridge systemd[1]: Reached target multi-user.target - Multi-User System.
+Jun 17 04:09:43 ghostbridge systemd[1]: Reached target graphical.target - Graphical Interface.
+Jun 17 04:09:43 ghostbridge systemd[1]: Starting systemd-update-utmp-runlevel.service - Record Runlevel Change in UTMP...
+Jun 17 04:09:43 ghostbridge systemd[1]: systemd-update-utmp-runlevel.service: Deactivated successfully.
+Jun 17 04:09:43 ghostbridge systemd[1]: Finished systemd-update-utmp-runlevel.service - Record Runlevel Change in UTMP.
+Jun 17 04:09:43 ghostbridge systemd[1]: Startup finished in 1.375s.
+Jun 17 04:09:44 ghostbridge bash[182]: ERROR: call_hocon_failed: -s emqx_conf_schema -c /etc/emqx/emqx.conf multi_get node.data_dir node.name node.cookie node.db_backend cluster.proto_dist node.dist_net_ticktime
+Jun 17 04:09:44 ghostbridge systemd[1]: emqx.service: Main process exited, code=exited, status=1/FAILURE
+Jun 17 04:09:44 ghostbridge systemd[1]: emqx.service: Failed with result 'exit-code'.
+Jun 17 04:09:44 ghostbridge systemd-networkd[89]: eth0: Gained IPv6LL
+Jun 17 04:09:48 ghostbridge systemd[1]: netmaker.service: Scheduled restart job, restart counter is at 1.
+Jun 17 04:09:48 ghostbridge systemd[1]: Stopped netmaker.service - Netmaker Server.
+Jun 17 04:11:38 ghostbridge su[358]: (to emqx) root on pts/3
+Jun 17 04:11:38 ghostbridge su[358]: pam_unix(su-l:session): session opened for user emqx(uid=103) by (uid=0)
+Jun 17 04:11:38 ghostbridge su[358]: pam_systemd(su-l:session): Failed to create session: Seat has no VTs but VT number not 0
+Jun 17 04:11:40 ghostbridge su[358]: pam_unix(su-l:session): session closed for user emqx
+Jun 17 04:11:44 ghostbridge systemd[1]: emqx.service: Scheduled restart job, restart counter is at 1.
+Jun 17 04:11:44 ghostbridge systemd[1]: Stopped emqx.service - emqx daemon.
+Jun 17 04:11:44 ghostbridge systemd[1]: Started emqx.service - emqx daemon.
+Jun 17 04:11:44 ghostbridge systemd[1]: Started netmaker.service - Netmaker Server.
+Jun 17 04:11:44 ghostbridge netmaker[441]: flag provided but not defined: -config
+Jun 17 04:11:44 ghostbridge netmaker[441]: Usage of /usr/local/bin/netmaker:
+Jun 17 04:11:44 ghostbridge netmaker[441]:   -c string
+Jun 17 04:11:44 ghostbridge netmaker[441]:             absolute path to configuration file
+Jun 17 04:11:44 ghostbridge systemd[1]: netmaker.service: Main process exited, code=exited, status=2/INVALIDARGUMENT
+Jun 17 04:11:44 ghostbridge systemd[1]: netmaker.service: Failed with result 'exit-code'.
+Jun 17 04:11:44 ghostbridge bash[494]: [error]: {scan_error,#{line => 17,reason => "illegal characters \"/m\"",file => "/etc/emqx/emqx.conf"}}
+Jun 17 04:11:46 ghostbridge bash[493]: ERROR: call_hocon_failed: -s emqx_conf_schema -c /etc/emqx/emqx.conf multi_get node.data_dir node.name node.cookie node.db_backend cluster.proto_dist node.dist_net_ticktime
+Jun 17 04:11:46 ghostbridge systemd[1]: emqx.service: Main process exited, code=exited, status=1/FAILURE
+Jun 17 04:11:46 ghostbridge systemd[1]: emqx.service: Failed with result 'exit-code'.
+Jun 17 04:11:49 ghostbridge systemd[1]: netmaker.service: Scheduled restart job, restart counter is at 2.
+Jun 17 04:11:49 ghostbridge systemd[1]: Stopped netmaker.service - Netmaker Server.
+Jun 17 04:13:46 ghostbridge systemd[1]: emqx.service: Scheduled restart job, restart counter is at 2.
+Jun 17 04:13:46 ghostbridge systemd[1]: Stopped emqx.service - emqx daemon.
+Jun 17 04:13:46 ghostbridge systemd[1]: Started emqx.service - emqx daemon.
+Jun 17 04:13:46 ghostbridge systemd[1]: Started netmaker.service - Netmaker Server.
+Jun 17 04:13:46 ghostbridge netmaker[516]: flag provided but not defined: -config
+Jun 17 04:13:46 ghostbridge netmaker[516]: Usage of /usr/local/bin/netmaker:
+Jun 17 04:13:46 ghostbridge netmaker[516]:   -c string
+Jun 17 04:13:46 ghostbridge netmaker[516]:             absolute path to configuration file
+Jun 17 04:13:46 ghostbridge systemd[1]: netmaker.service: Main process exited, code=exited, status=2/INVALIDARGUMENT
+Jun 17 04:13:46 ghostbridge systemd[1]: netmaker.service: Failed with result 'exit-code'.
+Jun 17 04:13:46 ghostbridge bash[569]: [error]: {scan_error,#{line => 17,reason => "illegal characters \"/m\"",file => "/etc/emqx/emqx.conf"}}
+Jun 17 04:13:47 ghostbridge bash[568]: ERROR: call_hocon_failed: -s emqx_conf_schema -c /etc/emqx/emqx.conf multi_get node.data_dir node.name node.cookie node.db_backend cluster.proto_dist node.dist_net_ticktime
+Jun 17 04:13:47 ghostbridge systemd[1]: emqx.service: Main process exited, code=exited, status=1/FAILURE
+Jun 17 04:13:47 ghostbridge systemd[1]: emqx.service: Failed with result 'exit-code'.
+Jun 17 04:13:51 ghostbridge systemd[1]: netmaker.service: Scheduled restart job, restart counter is at 3.
+Jun 17 04:13:51 ghostbridge systemd[1]: Stopped netmaker.service - Netmaker Server.
+Jun 17 04:15:01 ghostbridge CRON[591]: pam_unix(cron:session): session opened for user root(uid=0) by (uid=0)
+Jun 17 04:15:01 ghostbridge CRON[592]: (root) CMD (cd / && run-parts --report /etc/cron.hourly)
+Jun 17 04:15:01 ghostbridge CRON[591]: pam_unix(cron:session): session closed for user root
+Jun 17 04:15:47 ghostbridge systemd[1]: emqx.service: Scheduled restart job, restart counter is at 3.
+Jun 17 04:15:47 ghostbridge systemd[1]: Stopped emqx.service - emqx daemon.
+Jun 17 04:15:47 ghostbridge systemd[1]: Started emqx.service - emqx daemon.
+Jun 17 04:15:47 ghostbridge systemd[1]: Started netmaker.service - Netmaker Server.
+Jun 17 04:15:47 ghostbridge netmaker[595]: flag provided but not defined: -config
+Jun 17 04:15:47 ghostbridge netmaker[595]: Usage of /usr/local/bin/netmaker:
+Jun 17 04:15:47 ghostbridge netmaker[595]:   -c string
+Jun 17 04:15:47 ghostbridge netmaker[595]:             absolute path to configuration file
+Jun 17 04:15:47 ghostbridge systemd[1]: netmaker.service: Main process exited, code=exited, status=2/INVALIDARGUMENT
+Jun 17 04:15:47 ghostbridge systemd[1]: netmaker.service: Failed with result 'exit-code'.
+Jun 17 04:15:48 ghostbridge bash[648]: [error]: {scan_error,#{line => 17,reason => "illegal characters \"/m\"",file => "/etc/emqx/emqx.conf"}}
+Jun 17 04:15:49 ghostbridge bash[647]: ERROR: call_hocon_failed: -s emqx_conf_schema -c /etc/emqx/emqx.conf multi_get node.data_dir node.name node.cookie node.db_backend cluster.proto_dist node.dist_net_ticktime
+Jun 17 04:15:49 ghostbridge systemd[1]: emqx.service: Main process exited, code=exited, status=1/FAILURE
+Jun 17 04:15:49 ghostbridge systemd[1]: emqx.service: Failed with result 'exit-code'.
+Jun 17 04:15:52 ghostbridge systemd[1]: netmaker.service: Scheduled restart job, restart counter is at 4.
+Jun 17 04:15:52 ghostbridge systemd[1]: Stopped netmaker.service - Netmaker Server.
+Jun 17 04:17:49 ghostbridge systemd[1]: emqx.service: Scheduled restart job, restart counter is at 4.
+Jun 17 04:17:49 ghostbridge systemd[1]: Stopped emqx.service - emqx daemon.
+Jun 17 04:17:49 ghostbridge systemd[1]: Started emqx.service - emqx daemon.
+Jun 17 04:17:49 ghostbridge systemd[1]: Started netmaker.service - Netmaker Server.
+Jun 17 04:17:49 ghostbridge netmaker[670]: flag provided but not defined: -config
+Jun 17 04:17:49 ghostbridge netmaker[670]: Usage of /usr/local/bin/netmaker:
+Jun 17 04:17:49 ghostbridge netmaker[670]:   -c string
+Jun 17 04:17:49 ghostbridge netmaker[670]:             absolute path to configuration file
+Jun 17 04:17:49 ghostbridge systemd[1]: netmaker.service: Main process exited, code=exited, status=2/INVALIDARGUMENT
+Jun 17 04:17:49 ghostbridge systemd[1]: netmaker.service: Failed with result 'exit-code'.
+Jun 17 04:17:49 ghostbridge bash[723]: [error]: {scan_error,#{line => 17,reason => "illegal characters \"/m\"",file => "/etc/emqx/emqx.conf"}}
+Jun 17 04:17:50 ghostbridge bash[722]: ERROR: call_hocon_failed: -s emqx_conf_schema -c /etc/emqx/emqx.conf multi_get node.data_dir node.name node.cookie node.db_backend cluster.proto_dist node.dist_net_ticktime
+Jun 17 04:17:50 ghostbridge systemd[1]: emqx.service: Main process exited, code=exited, status=1/FAILURE
+Jun 17 04:17:50 ghostbridge systemd[1]: emqx.service: Failed with result 'exit-code'.
+Jun 17 04:17:54 ghostbridge systemd[1]: netmaker.service: Scheduled restart job, restart counter is at 5.
+Jun 17 04:17:54 ghostbridge systemd[1]: Stopped netmaker.service - Netmaker Server.
+Jun 17 04:19:00 ghostbridge su[746]: (to emqx) root on pts/3
+Jun 17 04:19:00 ghostbridge su[746]: pam_unix(su-l:session): session opened for user emqx(uid=103) by (uid=0)
+Jun 17 04:19:00 ghostbridge su[746]: pam_systemd(su-l:session): Failed to create session: Seat has no VTs but VT number not 0
+Jun 17 04:19:02 ghostbridge su[746]: pam_unix(su-l:session): session closed for user emqx
+Jun 17 04:19:50 ghostbridge systemd[1]: emqx.service: Scheduled restart job, restart counter is at 5.
+Jun 17 04:19:50 ghostbridge systemd[1]: Stopped emqx.service - emqx daemon.
+Jun 17 04:19:50 ghostbridge systemd[1]: Started emqx.service - emqx daemon.
+Jun 17 04:19:50 ghostbridge systemd[1]: Started netmaker.service - Netmaker Server.
+Jun 17 04:19:50 ghostbridge netmaker[829]: flag provided but not defined: -config
+Jun 17 04:19:50 ghostbridge netmaker[829]: Usage of /usr/local/bin/netmaker:
+Jun 17 04:19:50 ghostbridge netmaker[829]:   -c string
+Jun 17 04:19:50 ghostbridge netmaker[829]:             absolute path to configuration file
+Jun 17 04:19:50 ghostbridge systemd[1]: netmaker.service: Main process exited, code=exited, status=2/INVALIDARGUMENT
+Jun 17 04:19:50 ghostbridge systemd[1]: netmaker.service: Failed with result 'exit-code'.
+Jun 17 04:19:51 ghostbridge bash[882]: [error]: {scan_error,#{line => 17,reason => "illegal characters \"/m\"",file => "/etc/emqx/emqx.conf"}}
+Jun 17 04:19:52 ghostbridge bash[881]: ERROR: call_hocon_failed: -s emqx_conf_schema -c /etc/emqx/emqx.conf multi_get node.data_dir node.name node.cookie node.db_backend cluster.proto_dist node.dist_net_ticktime
+Jun 17 04:19:52 ghostbridge systemd[1]: emqx.service: Main process exited, code=exited, status=1/FAILURE
+Jun 17 04:19:52 ghostbridge systemd[1]: emqx.service: Failed with result 'exit-code'.
+Jun 17 04:19:55 ghostbridge systemd[1]: netmaker.service: Scheduled restart job, restart counter is at 6.
+Jun 17 04:19:55 ghostbridge systemd[1]: Stopped netmaker.service - Netmaker Server.
+Jun 17 04:21:52 ghostbridge systemd[1]: emqx.service: Scheduled restart job, restart counter is at 6.
+Jun 17 04:21:52 ghostbridge systemd[1]: Stopped emqx.service - emqx daemon.
+Jun 17 04:21:52 ghostbridge systemd[1]: Started emqx.service - emqx daemon.
+Jun 17 04:21:52 ghostbridge systemd[1]: Started netmaker.service - Netmaker Server.
+Jun 17 04:21:52 ghostbridge netmaker[905]: flag provided but not defined: -config
+Jun 17 04:21:52 ghostbridge netmaker[905]: Usage of /usr/local/bin/netmaker:
+Jun 17 04:21:52 ghostbridge netmaker[905]:   -c string
+Jun 17 04:21:52 ghostbridge netmaker[905]:             absolute path to configuration file
+Jun 17 04:21:52 ghostbridge systemd[1]: netmaker.service: Main process exited, code=exited, status=2/INVALIDARGUMENT
+Jun 17 04:21:52 ghostbridge systemd[1]: netmaker.service: Failed with result 'exit-code'.
+Jun 17 04:21:52 ghostbridge bash[958]: [error]: {scan_error,#{line => 17,reason => "illegal characters \"/m\"",file => "/etc/emqx/emqx.conf"}}
+Jun 17 04:21:53 ghostbridge bash[957]: ERROR: call_hocon_failed: -s emqx_conf_schema -c /etc/emqx/emqx.conf multi_get node.data_dir node.name node.cookie node.db_backend cluster.proto_dist node.dist_net_ticktime
+Jun 17 04:21:53 ghostbridge systemd[1]: emqx.service: Main process exited, code=exited, status=1/FAILURE
+Jun 17 04:21:53 ghostbridge systemd[1]: emqx.service: Failed with result 'exit-code'.
+Jun 17 04:21:57 ghostbridge systemd[1]: netmaker.service: Scheduled restart job, restart counter is at 7.
+Jun 17 04:21:57 ghostbridge systemd[1]: Stopped netmaker.service - Netmaker Server.
+Jun 17 04:23:21 ghostbridge su[981]: (to emqx) root on pts/3
+Jun 17 04:23:21 ghostbridge su[981]: pam_unix(su-l:session): session opened for user emqx(uid=103) by (uid=0)
+Jun 17 04:23:21 ghostbridge su[981]: pam_systemd(su-l:session): Failed to create session: Seat has no VTs but VT number not 0
+Jun 17 04:23:22 ghostbridge su[981]: pam_unix(su-l:session): session closed for user emqx
+Jun 17 04:23:53 ghostbridge systemd[1]: emqx.service: Scheduled restart job, restart counter is at 7.
+Jun 17 04:23:53 ghostbridge systemd[1]: Stopped emqx.service - emqx daemon.
+Jun 17 04:23:53 ghostbridge systemd[1]: Started emqx.service - emqx daemon.
+Jun 17 04:23:53 ghostbridge systemd[1]: Started netmaker.service - Netmaker Server.
+Jun 17 04:23:53 ghostbridge netmaker[1064]: flag provided but not defined: -config
+Jun 17 04:23:53 ghostbridge netmaker[1064]: Usage of /usr/local/bin/netmaker:
+Jun 17 04:23:53 ghostbridge netmaker[1064]:   -c string
+Jun 17 04:23:53 ghostbridge netmaker[1064]:             absolute path to configuration file
+Jun 17 04:23:53 ghostbridge systemd[1]: netmaker.service: Main process exited, code=exited, status=2/INVALIDARGUMENT
+Jun 17 04:23:53 ghostbridge systemd[1]: netmaker.service: Failed with result 'exit-code'.
+Jun 17 04:23:54 ghostbridge bash[1117]: [error]: {scan_error,#{line => 17,reason => "illegal characters \"/m\"",file => "/etc/emqx/emqx.conf"}}
+Jun 17 04:23:55 ghostbridge bash[1116]: ERROR: call_hocon_failed: -s emqx_conf_schema -c /etc/emqx/emqx.conf multi_get node.data_dir node.name node.cookie node.db_backend cluster.proto_dist node.dist_net_ticktime
+Jun 17 04:23:55 ghostbridge systemd[1]: emqx.service: Main process exited, code=exited, status=1/FAILURE
+Jun 17 04:23:55 ghostbridge systemd[1]: emqx.service: Failed with result 'exit-code'.
+Jun 17 04:23:58 ghostbridge systemd[1]: netmaker.service: Scheduled restart job, restart counter is at 8.
+Jun 17 04:23:58 ghostbridge systemd[1]: Stopped netmaker.service - Netmaker Server.
+Jun 17 04:25:03 ghostbridge systemd[1]: Starting systemd-tmpfiles-clean.service - Cleanup of Temporary Directories...
+Jun 17 04:25:03 ghostbridge systemd[1]: systemd-tmpfiles-clean.service: Deactivated successfully.
+Jun 17 04:25:03 ghostbridge systemd[1]: Finished systemd-tmpfiles-clean.service - Cleanup of Temporary Directories.
+Jun 17 04:25:03 ghostbridge systemd[1]: run-credentials-systemd\x2dtmpfiles\x2dclean.service.mount: Deactivated successfully.
+Jun 17 04:25:29 ghostbridge su[1142]: (to emqx) root on pts/3
+Jun 17 04:25:29 ghostbridge su[1142]: pam_unix(su-l:session): session opened for user emqx(uid=103) by (uid=0)
+Jun 17 04:25:29 ghostbridge su[1142]: pam_systemd(su-l:session): Failed to create session: Seat has no VTs but VT number not 0
+Jun 17 04:25:30 ghostbridge su[1142]: pam_unix(su-l:session): session closed for user emqx
+Jun 17 04:25:55 ghostbridge systemd[1]: emqx.service: Scheduled restart job, restart counter is at 8.
+Jun 17 04:25:55 ghostbridge systemd[1]: Stopped emqx.service - emqx daemon.
+Jun 17 04:25:55 ghostbridge systemd[1]: Started emqx.service - emqx daemon.
+Jun 17 04:25:55 ghostbridge systemd[1]: Started netmaker.service - Netmaker Server.
+Jun 17 04:25:55 ghostbridge netmaker[1225]: flag provided but not defined: -config
+Jun 17 04:25:55 ghostbridge netmaker[1225]: Usage of /usr/local/bin/netmaker:
+Jun 17 04:25:55 ghostbridge netmaker[1225]:   -c string
+Jun 17 04:25:55 ghostbridge netmaker[1225]:             absolute path to configuration file
+Jun 17 04:25:55 ghostbridge systemd[1]: netmaker.service: Main process exited, code=exited, status=2/INVALIDARGUMENT
+Jun 17 04:25:55 ghostbridge systemd[1]: netmaker.service: Failed with result 'exit-code'.
+Jun 17 04:25:55 ghostbridge bash[1278]: [error]: {scan_error,#{line => 17,reason => "illegal characters \"/m\"",file => "/etc/emqx/emqx.conf"}}
+Jun 17 04:25:56 ghostbridge bash[1277]: ERROR: call_hocon_failed: -s emqx_conf_schema -c /etc/emqx/emqx.conf multi_get node.data_dir node.name node.cookie node.db_backend cluster.proto_dist node.dist_net_ticktime
+Jun 17 04:25:56 ghostbridge systemd[1]: emqx.service: Main process exited, code=exited, status=1/FAILURE
+Jun 17 04:25:56 ghostbridge systemd[1]: emqx.service: Failed with result 'exit-code'.
+Jun 17 04:26:00 ghostbridge systemd[1]: netmaker.service: Scheduled restart job, restart counter is at 9.
+Jun 17 04:26:00 ghostbridge systemd[1]: Stopped netmaker.service - Netmaker Server.
+Jun 17 04:27:56 ghostbridge systemd[1]: emqx.service: Scheduled restart job, restart counter is at 9.
+Jun 17 04:27:56 ghostbridge systemd[1]: Stopped emqx.service - emqx daemon.
+Jun 17 04:27:56 ghostbridge systemd[1]: Started emqx.service - emqx daemon.
+Jun 17 04:27:56 ghostbridge systemd[1]: Started netmaker.service - Netmaker Server.
+Jun 17 04:27:56 ghostbridge netmaker[1301]: flag provided but not defined: -config
+Jun 17 04:27:56 ghostbridge netmaker[1301]: Usage of /usr/local/bin/netmaker:
+Jun 17 04:27:56 ghostbridge netmaker[1301]:   -c string
+Jun 17 04:27:56 ghostbridge netmaker[1301]:             absolute path to configuration file
+Jun 17 04:27:56 ghostbridge systemd[1]: netmaker.service: Main process exited, code=exited, status=2/INVALIDARGUMENT
+Jun 17 04:27:56 ghostbridge systemd[1]: netmaker.service: Failed with result 'exit-code'.
+Jun 17 04:27:57 ghostbridge bash[1354]: [error]: {scan_error,#{line => 17,reason => "illegal characters \"/m\"",file => "/etc/emqx/emqx.conf"}}
+Jun 17 04:27:58 ghostbridge bash[1353]: ERROR: call_hocon_failed: -s emqx_conf_schema -c /etc/emqx/emqx.conf multi_get node.data_dir node.name node.cookie node.db_backend cluster.proto_dist node.dist_net_ticktime
+Jun 17 04:27:58 ghostbridge systemd[1]: emqx.service: Main process exited, code=exited, status=1/FAILURE
+Jun 17 04:27:58 ghostbridge systemd[1]: emqx.service: Failed with result 'exit-code'.
+Jun 17 04:28:02 ghostbridge systemd[1]: netmaker.service: Scheduled restart job, restart counter is at 10.
+Jun 17 04:28:02 ghostbridge systemd[1]: Stopped netmaker.service - Netmaker Server.
+Jun 17 04:29:04 ghostbridge su[1377]: (to emqx) root on pts/3
+Jun 17 04:29:04 ghostbridge su[1377]: pam_unix(su-l:session): session opened for user emqx(uid=103) by (uid=0)
+Jun 17 04:29:04 ghostbridge su[1377]: pam_systemd(su-l:session): Failed to create session: Seat has no VTs but VT number not 0
+Jun 17 04:29:06 ghostbridge su[1377]: pam_unix(su-l:session): session closed for user emqx
+Jun 17 04:29:58 ghostbridge systemd[1]: emqx.service: Scheduled restart job, restart counter is at 10.
+Jun 17 04:29:58 ghostbridge systemd[1]: Stopped emqx.service - emqx daemon.
+Jun 17 04:29:58 ghostbridge systemd[1]: Started emqx.service - emqx daemon.
+Jun 17 04:29:58 ghostbridge systemd[1]: Started netmaker.service - Netmaker Server.
+Jun 17 04:29:58 ghostbridge netmaker[1460]: flag provided but not defined: -config
+Jun 17 04:29:58 ghostbridge netmaker[1460]: Usage of /usr/local/bin/netmaker:
+Jun 17 04:29:58 ghostbridge netmaker[1460]:   -c string
+Jun 17 04:29:58 ghostbridge netmaker[1460]:             absolute path to configuration file
+Jun 17 04:29:58 ghostbridge systemd[1]: netmaker.service: Main process exited, code=exited, status=2/INVALIDARGUMENT
+Jun 17 04:29:58 ghostbridge systemd[1]: netmaker.service: Failed with result 'exit-code'.
+Jun 17 04:29:59 ghostbridge bash[1513]: [error]: {scan_error,#{line => 17,reason => "illegal characters \"/m\"",file => "/etc/emqx/emqx.conf"}}
+Jun 17 04:30:00 ghostbridge bash[1512]: ERROR: call_hocon_failed: -s emqx_conf_schema -c /etc/emqx/emqx.conf multi_get node.data_dir node.name node.cookie node.db_backend cluster.proto_dist node.dist_net_ticktime
+Jun 17 04:30:00 ghostbridge systemd[1]: emqx.service: Main process exited, code=exited, status=1/FAILURE
+Jun 17 04:30:00 ghostbridge systemd[1]: emqx.service: Failed with result 'exit-code'.
+Jun 17 04:30:03 ghostbridge systemd[1]: netmaker.service: Scheduled restart job, restart counter is at 11.
+Jun 17 04:30:03 ghostbridge systemd[1]: Stopped netmaker.service - Netmaker Server.
+Jun 17 04:30:52 ghostbridge su[1536]: (to emqx) root on pts/3
+Jun 17 04:30:52 ghostbridge su[1536]: pam_unix(su-l:session): session opened for user emqx(uid=103) by (uid=0)
+Jun 17 04:30:52 ghostbridge su[1536]: pam_systemd(su-l:session): Failed to create session: Seat has no VTs but VT number not 0
+Jun 17 04:30:53 ghostbridge su[1536]: pam_unix(su-l:session): session closed for user emqx
+Jun 17 04:32:00 ghostbridge systemd[1]: emqx.service: Scheduled restart job, restart counter is at 11.
+Jun 17 04:32:00 ghostbridge systemd[1]: Stopped emqx.service - emqx daemon.
+Jun 17 04:32:00 ghostbridge systemd[1]: Started emqx.service - emqx daemon.
+Jun 17 04:32:00 ghostbridge systemd[1]: Started netmaker.service - Netmaker Server.
+Jun 17 04:32:00 ghostbridge netmaker[1622]: flag provided but not defined: -config
+Jun 17 04:32:00 ghostbridge netmaker[1622]: Usage of /usr/local/bin/netmaker:
+Jun 17 04:32:00 ghostbridge netmaker[1622]:   -c string
+Jun 17 04:32:00 ghostbridge netmaker[1622]:             absolute path to configuration file
+Jun 17 04:32:00 ghostbridge systemd[1]: netmaker.service: Main process exited, code=exited, status=2/INVALIDARGUMENT
+Jun 17 04:32:00 ghostbridge systemd[1]: netmaker.service: Failed with result 'exit-code'.
+Jun 17 04:32:00 ghostbridge bash[1675]: [error]: {scan_error,#{line => 17,reason => "illegal characters \"/m\"",file => "/etc/emqx/emqx.conf"}}
+Jun 17 04:32:01 ghostbridge bash[1674]: ERROR: call_hocon_failed: -s emqx_conf_schema -c /etc/emqx/emqx.conf multi_get node.data_dir node.name node.cookie node.db_backend cluster.proto_dist node.dist_net_ticktime
+Jun 17 04:32:01 ghostbridge systemd[1]: emqx.service: Main process exited, code=exited, status=1/FAILURE
+Jun 17 04:32:01 ghostbridge systemd[1]: emqx.service: Failed with result 'exit-code'.
+Jun 17 04:32:05 ghostbridge systemd[1]: netmaker.service: Scheduled restart job, restart counter is at 12.
+Jun 17 04:32:05 ghostbridge systemd[1]: Stopped netmaker.service - Netmaker Server.
+Jun 17 04:32:36 ghostbridge su[1698]: (to emqx) root on pts/3
+Jun 17 04:32:36 ghostbridge su[1698]: pam_unix(su-l:session): session opened for user emqx(uid=103) by (uid=0)
+Jun 17 04:32:36 ghostbridge su[1698]: pam_systemd(su-l:session): Failed to create session: Seat has no VTs but VT number not 0
+Jun 17 04:32:37 ghostbridge su[1698]: pam_unix(su-l:session): session closed for user emqx
+Jun 17 04:33:50 ghostbridge su[1786]: (to emqx) root on pts/3
+Jun 17 04:33:50 ghostbridge su[1786]: pam_unix(su-l:session): session opened for user emqx(uid=103) by (uid=0)
+Jun 17 04:33:50 ghostbridge su[1786]: pam_systemd(su-l:session): Failed to create session: Seat has no VTs but VT number not 0
+Jun 17 04:33:51 ghostbridge su[1786]: pam_unix(su-l:session): session closed for user emqx
+Jun 17 04:34:01 ghostbridge systemd[1]: emqx.service: Scheduled restart job, restart counter is at 12.
+Jun 17 04:34:01 ghostbridge systemd[1]: Stopped emqx.service - emqx daemon.
+Jun 17 04:34:01 ghostbridge systemd[1]: Started emqx.service - emqx daemon.
+Jun 17 04:34:01 ghostbridge systemd[1]: Started netmaker.service - Netmaker Server.
+Jun 17 04:34:01 ghostbridge netmaker[1871]: flag provided but not defined: -config
+Jun 17 04:34:01 ghostbridge netmaker[1871]: Usage of /usr/local/bin/netmaker:
+Jun 17 04:34:01 ghostbridge netmaker[1871]:   -c string
+Jun 17 04:34:01 ghostbridge netmaker[1871]:             absolute path to configuration file
+Jun 17 04:34:01 ghostbridge systemd[1]: netmaker.service: Main process exited, code=exited, status=2/INVALIDARGUMENT
+Jun 17 04:34:01 ghostbridge systemd[1]: netmaker.service: Failed with result 'exit-code'.
+Jun 17 04:34:02 ghostbridge bash[1924]: [error]: {scan_error,#{line => 59,reason => "illegal characters \"|\"",file => "/etc/emqx/emqx.conf"}}
+Jun 17 04:34:03 ghostbridge bash[1923]: ERROR: call_hocon_failed: -s emqx_conf_schema -c /etc/emqx/emqx.conf multi_get node.data_dir node.name node.cookie node.db_backend cluster.proto_dist node.dist_net_ticktime
+Jun 17 04:34:03 ghostbridge systemd[1]: emqx.service: Main process exited, code=exited, status=1/FAILURE
+Jun 17 04:34:03 ghostbridge systemd[1]: emqx.service: Failed with result 'exit-code'.
+Jun 17 04:34:07 ghostbridge systemd[1]: netmaker.service: Scheduled restart job, restart counter is at 13.
+Jun 17 04:34:07 ghostbridge systemd[1]: Stopped netmaker.service - Netmaker Server.
+Jun 17 04:34:56 ghostbridge su[1948]: (to emqx) root on pts/3
+Jun 17 04:34:56 ghostbridge su[1948]: pam_unix(su-l:session): session opened for user emqx(uid=103) by (uid=0)
+Jun 17 04:34:56 ghostbridge su[1948]: pam_systemd(su-l:session): Failed to create session: Seat has no VTs but VT number not 0
+Jun 17 04:34:57 ghostbridge su[1948]: pam_unix(su-l:session): session closed for user emqx
+Jun 17 04:36:03 ghostbridge systemd[1]: emqx.service: Scheduled restart job, restart counter is at 13.
+Jun 17 04:36:03 ghostbridge systemd[1]: Stopped emqx.service - emqx daemon.
+Jun 17 04:36:03 ghostbridge systemd[1]: Started emqx.service - emqx daemon.
+Jun 17 04:36:03 ghostbridge systemd[1]: Started netmaker.service - Netmaker Server.
+Jun 17 04:36:03 ghostbridge netmaker[2034]: flag provided but not defined: -config
+Jun 17 04:36:03 ghostbridge netmaker[2034]: Usage of /usr/local/bin/netmaker:
+Jun 17 04:36:03 ghostbridge netmaker[2034]:   -c string
+Jun 17 04:36:03 ghostbridge netmaker[2034]:             absolute path to configuration file
+Jun 17 04:36:03 ghostbridge systemd[1]: netmaker.service: Main process exited, code=exited, status=2/INVALIDARGUMENT
+Jun 17 04:36:03 ghostbridge systemd[1]: netmaker.service: Failed with result 'exit-code'.
+Jun 17 04:36:04 ghostbridge bash[2087]: [error]: {parse_error,#{line => 10,reason => "syntax error before: 0.0",file => "/etc/emqx/emqx.conf"}}
+Jun 17 04:36:05 ghostbridge bash[2086]: ERROR: call_hocon_failed: -s emqx_conf_schema -c /etc/emqx/emqx.conf multi_get node.data_dir node.name node.cookie node.db_backend cluster.proto_dist node.dist_net_ticktime
+Jun 17 04:36:05 ghostbridge systemd[1]: emqx.service: Main process exited, code=exited, status=1/FAILURE
+Jun 17 04:36:05 ghostbridge systemd[1]: emqx.service: Failed with result 'exit-code'.
+Jun 17 04:36:08 ghostbridge systemd[1]: netmaker.service: Scheduled restart job, restart counter is at 14.
+Jun 17 04:36:08 ghostbridge systemd[1]: Stopped netmaker.service - Netmaker Server.
+Jun 17 04:36:30 ghostbridge su[2110]: (to emqx) root on pts/3
+Jun 17 04:36:30 ghostbridge su[2110]: pam_unix(su-l:session): session opened for user emqx(uid=103) by (uid=0)
+Jun 17 04:36:30 ghostbridge su[2110]: pam_systemd(su-l:session): Failed to create session: Seat has no VTs but VT number not 0
+Jun 17 04:36:32 ghostbridge su[2110]: pam_unix(su-l:session): session closed for user emqx
+Jun 17 04:38:05 ghostbridge systemd[1]: emqx.service: Scheduled restart job, restart counter is at 14.
+Jun 17 04:38:05 ghostbridge systemd[1]: Stopped emqx.service - emqx daemon.
+Jun 17 04:38:05 ghostbridge systemd[1]: Started emqx.service - emqx daemon.
+Jun 17 04:38:05 ghostbridge systemd[1]: Started netmaker.service - Netmaker Server.
+Jun 17 04:38:05 ghostbridge netmaker[2196]: flag provided but not defined: -config
+Jun 17 04:38:05 ghostbridge netmaker[2196]: Usage of /usr/local/bin/netmaker:
+Jun 17 04:38:05 ghostbridge netmaker[2196]:   -c string
+Jun 17 04:38:05 ghostbridge netmaker[2196]:             absolute path to configuration file
+Jun 17 04:38:05 ghostbridge systemd[1]: netmaker.service: Main process exited, code=exited, status=2/INVALIDARGUMENT
+Jun 17 04:38:05 ghostbridge systemd[1]: netmaker.service: Failed with result 'exit-code'.
+Jun 17 04:38:05 ghostbridge bash[2249]: [error]: {parse_error,#{line => 23,reason => "syntax error before: \"tPBFMG82fLQMUUEvL0TPhskc\"",file => "/etc/emqx/emqx.conf"}}
+Jun 17 04:38:06 ghostbridge bash[2248]: ERROR: call_hocon_failed: -s emqx_conf_schema -c /etc/emqx/emqx.conf multi_get node.data_dir node.name node.cookie node.db_backend cluster.proto_dist node.dist_net_ticktime
+Jun 17 04:38:06 ghostbridge systemd[1]: emqx.service: Main process exited, code=exited, status=1/FAILURE
+Jun 17 04:38:06 ghostbridge systemd[1]: emqx.service: Failed with result 'exit-code'.
+Jun 17 04:38:10 ghostbridge systemd[1]: netmaker.service: Scheduled restart job, restart counter is at 15.
+Jun 17 04:38:10 ghostbridge systemd[1]: Stopped netmaker.service - Netmaker Server.
+Jun 17 04:40:07 ghostbridge systemd[1]: emqx.service: Scheduled restart job, restart counter is at 15.
+Jun 17 04:40:07 ghostbridge systemd[1]: Stopped emqx.service - emqx daemon.
+Jun 17 04:40:07 ghostbridge systemd[1]: Started emqx.service - emqx daemon.
+Jun 17 04:40:07 ghostbridge systemd[1]: Started netmaker.service - Netmaker Server.
+Jun 17 04:40:07 ghostbridge netmaker[2272]: flag provided but not defined: -config
+Jun 17 04:40:07 ghostbridge netmaker[2272]: Usage of /usr/local/bin/netmaker:
+Jun 17 04:40:07 ghostbridge netmaker[2272]:   -c string
+Jun 17 04:40:07 ghostbridge netmaker[2272]:             absolute path to configuration file
+Jun 17 04:40:07 ghostbridge systemd[1]: netmaker.service: Main process exited, code=exited, status=2/INVALIDARGUMENT
+Jun 17 04:40:07 ghostbridge systemd[1]: netmaker.service: Failed with result 'exit-code'.
+Jun 17 04:40:07 ghostbridge bash[2325]: [error]: {parse_error,#{line => 23,reason => "syntax error before: \"tPBFMG82fLQMUUEvL0TPhskc\"",file => "/etc/emqx/emqx.conf"}}
+Jun 17 04:40:08 ghostbridge bash[2324]: ERROR: call_hocon_failed: -s emqx_conf_schema -c /etc/emqx/emqx.conf multi_get node.data_dir node.name node.cookie node.db_backend cluster.proto_dist node.dist_net_ticktime
+Jun 17 04:40:08 ghostbridge systemd[1]: emqx.service: Main process exited, code=exited, status=1/FAILURE
+Jun 17 04:40:08 ghostbridge systemd[1]: emqx.service: Failed with result 'exit-code'.
+Jun 17 04:40:12 ghostbridge systemd[1]: netmaker.service: Scheduled restart job, restart counter is at 16.
+Jun 17 04:40:12 ghostbridge systemd[1]: Stopped netmaker.service - Netmaker Server.
+Jun 17 04:41:27 ghostbridge su[2350]: (to emqx) root on pts/3
+Jun 17 04:41:27 ghostbridge su[2350]: pam_unix(su-l:session): session opened for user emqx(uid=103) by (uid=0)
+Jun 17 04:41:27 ghostbridge su[2350]: pam_systemd(su-l:session): Failed to create session: Seat has no VTs but VT number not 0
+Jun 17 04:41:29 ghostbridge su[2350]: pam_unix(su-l:session): session closed for user emqx
+Jun 17 04:42:08 ghostbridge systemd[1]: emqx.service: Scheduled restart job, restart counter is at 16.
+Jun 17 04:42:08 ghostbridge systemd[1]: Stopped emqx.service - emqx daemon.
+Jun 17 04:42:08 ghostbridge systemd[1]: Started emqx.service - emqx daemon.
+Jun 17 04:42:08 ghostbridge systemd[1]: Started netmaker.service - Netmaker Server.
+Jun 17 04:42:08 ghostbridge netmaker[2433]: flag provided but not defined: -config
+Jun 17 04:42:08 ghostbridge netmaker[2433]: Usage of /usr/local/bin/netmaker:
+Jun 17 04:42:08 ghostbridge netmaker[2433]:   -c string
+Jun 17 04:42:08 ghostbridge netmaker[2433]:             absolute path to configuration file
+Jun 17 04:42:08 ghostbridge systemd[1]: netmaker.service: Main process exited, code=exited, status=2/INVALIDARGUMENT
+Jun 17 04:42:08 ghostbridge systemd[1]: netmaker.service: Failed with result 'exit-code'.
+Jun 17 04:42:09 ghostbridge bash[2486]: [error]: {parse_error,#{line => 23,reason => "syntax error before: \"tPBFMG82fLQMUUEvL0TPhskc\"",file => "/etc/emqx/emqx.conf"}}
+Jun 17 04:42:10 ghostbridge bash[2485]: ERROR: call_hocon_failed: -s emqx_conf_schema -c /etc/emqx/emqx.conf multi_get node.data_dir node.name node.cookie node.db_backend cluster.proto_dist node.dist_net_ticktime
+Jun 17 04:42:10 ghostbridge systemd[1]: emqx.service: Main process exited, code=exited, status=1/FAILURE
+Jun 17 04:42:10 ghostbridge systemd[1]: emqx.service: Failed with result 'exit-code'.
+Jun 17 04:42:13 ghostbridge systemd[1]: netmaker.service: Scheduled restart job, restart counter is at 17.
+Jun 17 04:42:13 ghostbridge systemd[1]: Stopped netmaker.service - Netmaker Server.
+Jun 17 04:42:53 ghostbridge su[2509]: (to emqx) root on pts/3
+Jun 17 04:42:53 ghostbridge su[2509]: pam_unix(su-l:session): session opened for user emqx(uid=103) by (uid=0)
+Jun 17 04:42:53 ghostbridge su[2509]: pam_systemd(su-l:session): Failed to create session: Seat has no VTs but VT number not 0
+Jun 17 04:42:55 ghostbridge su[2509]: pam_unix(su-l:session): session closed for user emqx
+Jun 17 04:44:10 ghostbridge systemd[1]: emqx.service: Scheduled restart job, restart counter is at 17.
+Jun 17 04:44:10 ghostbridge systemd[1]: Stopped emqx.service - emqx daemon.
+Jun 17 04:44:10 ghostbridge systemd[1]: Started emqx.service - emqx daemon.
+Jun 17 04:44:10 ghostbridge systemd[1]: Started netmaker.service - Netmaker Server.
+Jun 17 04:44:10 ghostbridge netmaker[2592]: flag provided but not defined: -config
+Jun 17 04:44:10 ghostbridge netmaker[2592]: Usage of /usr/local/bin/netmaker:
+Jun 17 04:44:10 ghostbridge netmaker[2592]:   -c string
+Jun 17 04:44:10 ghostbridge netmaker[2592]:             absolute path to configuration file
+Jun 17 04:44:10 ghostbridge systemd[1]: netmaker.service: Main process exited, code=exited, status=2/INVALIDARGUMENT
+Jun 17 04:44:10 ghostbridge systemd[1]: netmaker.service: Failed with result 'exit-code'.
+Jun 17 04:44:10 ghostbridge bash[2645]: [error]: {parse_error,#{line => 23,reason => "syntax error before: \"tPBFMG82fLQMUUEvL0TPhskc\"",file => "/etc/emqx/emqx.conf"}}
+Jun 17 04:44:11 ghostbridge bash[2644]: ERROR: call_hocon_failed: -s emqx_conf_schema -c /etc/emqx/emqx.conf multi_get node.data_dir node.name node.cookie node.db_backend cluster.proto_dist node.dist_net_ticktime
+Jun 17 04:44:11 ghostbridge systemd[1]: emqx.service: Main process exited, code=exited, status=1/FAILURE
+Jun 17 04:44:11 ghostbridge systemd[1]: emqx.service: Failed with result 'exit-code'.
+Jun 17 04:44:15 ghostbridge systemd[1]: netmaker.service: Scheduled restart job, restart counter is at 18.
+Jun 17 04:44:15 ghostbridge systemd[1]: Stopped netmaker.service - Netmaker Server.
+Jun 17 04:45:40 ghostbridge pct[145218]: failed to create file: /root/: Is a directory
+Jun 17 04:46:11 ghostbridge systemd[1]: emqx.service: Scheduled restart job, restart counter is at 18.
+Jun 17 04:46:11 ghostbridge systemd[1]: Stopped emqx.service - emqx daemon.
+Jun 17 04:46:11 ghostbridge systemd[1]: Started emqx.service - emqx daemon.
+Jun 17 04:46:11 ghostbridge systemd[1]: Started netmaker.service - Netmaker Server.
+Jun 17 04:46:11 ghostbridge netmaker[2670]: flag provided but not defined: -config
+Jun 17 04:46:11 ghostbridge netmaker[2670]: Usage of /usr/local/bin/netmaker:
+Jun 17 04:46:11 ghostbridge netmaker[2670]:   -c string
+Jun 17 04:46:11 ghostbridge netmaker[2670]:             absolute path to configuration file
+Jun 17 04:46:11 ghostbridge systemd[1]: netmaker.service: Main process exited, code=exited, status=2/INVALIDARGUMENT
+Jun 17 04:46:11 ghostbridge systemd[1]: netmaker.service: Failed with result 'exit-code'.
+Jun 17 04:46:12 ghostbridge bash[2723]: [error]: {parse_error,#{line => 23,reason => "syntax error before: \"tPBFMG82fLQMUUEvL0TPhskc\"",file => "/etc/emqx/emqx.conf"}}
+Jun 17 04:46:13 ghostbridge bash[2722]: ERROR: call_hocon_failed: -s emqx_conf_schema -c /etc/emqx/emqx.conf multi_get node.data_dir node.name node.cookie node.db_backend cluster.proto_dist node.dist_net_ticktime
+Jun 17 04:46:13 ghostbridge systemd[1]: emqx.service: Main process exited, code=exited, status=1/FAILURE
+Jun 17 04:46:13 ghostbridge systemd[1]: emqx.service: Failed with result 'exit-code'.
+Jun 17 04:46:16 ghostbridge systemd[1]: netmaker.service: Scheduled restart job, restart counter is at 19.
+Jun 17 04:46:16 ghostbridge systemd[1]: Stopped netmaker.service - Netmaker Server.
+Jun 17 04:47:06 ghostbridge su[2749]: (to emqx) root on pts/3
+Jun 17 04:47:06 ghostbridge su[2749]: pam_unix(su-l:session): session opened for user emqx(uid=103) by (uid=0)
+Jun 17 04:47:06 ghostbridge su[2749]: pam_systemd(su-l:session): Failed to create session: Seat has no VTs but VT number not 0
+Jun 17 04:47:08 ghostbridge su[2749]: pam_unix(su-l:session): session closed for user emqx
+Jun 17 04:48:13 ghostbridge systemd[1]: emqx.service: Scheduled restart job, restart counter is at 19.
+Jun 17 04:48:13 ghostbridge systemd[1]: Stopped emqx.service - emqx daemon.
+Jun 17 04:48:13 ghostbridge systemd[1]: Started emqx.service - emqx daemon.
+Jun 17 04:48:13 ghostbridge systemd[1]: Started netmaker.service - Netmaker Server.
+Jun 17 04:48:13 ghostbridge netmaker[2834]: flag provided but not defined: -config
+Jun 17 04:48:13 ghostbridge netmaker[2834]: Usage of /usr/local/bin/netmaker:
+Jun 17 04:48:13 ghostbridge netmaker[2834]:   -c string
+Jun 17 04:48:13 ghostbridge netmaker[2834]:             absolute path to configuration file
+Jun 17 04:48:13 ghostbridge systemd[1]: netmaker.service: Main process exited, code=exited, status=2/INVALIDARGUMENT
+Jun 17 04:48:13 ghostbridge systemd[1]: netmaker.service: Failed with result 'exit-code'.
+Jun 17 04:48:13 ghostbridge bash[2887]: [error]: {scan_error,#{line => 20,reason => "illegal characters \"/a\"",file => "/etc/emqx/emqx.conf"}}
+Jun 17 04:48:14 ghostbridge bash[2886]: ERROR: call_hocon_failed: -s emqx_conf_schema -c /etc/emqx/emqx.conf multi_get node.data_dir node.name node.cookie node.db_backend cluster.proto_dist node.dist_net_ticktime
+Jun 17 04:48:14 ghostbridge systemd[1]: emqx.service: Main process exited, code=exited, status=1/FAILURE
+Jun 17 04:48:14 ghostbridge systemd[1]: emqx.service: Failed with result 'exit-code'.
+Jun 17 04:48:18 ghostbridge systemd[1]: netmaker.service: Scheduled restart job, restart counter is at 20.
+Jun 17 04:48:18 ghostbridge systemd[1]: Stopped netmaker.service - Netmaker Server.
+Jun 17 04:49:17 ghostbridge su[2912]: (to emqx) root on pts/3
+Jun 17 04:49:17 ghostbridge su[2912]: pam_unix(su-l:session): session opened for user emqx(uid=103) by (uid=0)
+Jun 17 04:49:17 ghostbridge su[2912]: pam_systemd(su-l:session): Failed to create session: Seat has no VTs but VT number not 0
+Jun 17 04:49:18 ghostbridge su[2912]: pam_unix(su-l:session): session closed for user emqx
+Jun 17 04:50:14 ghostbridge systemd[1]: emqx.service: Scheduled restart job, restart counter is at 20.
+Jun 17 04:50:14 ghostbridge systemd[1]: Stopped emqx.service - emqx daemon.
+Jun 17 04:50:14 ghostbridge systemd[1]: Started emqx.service - emqx daemon.
+Jun 17 04:50:14 ghostbridge systemd[1]: Started netmaker.service - Netmaker Server.
+Jun 17 04:50:14 ghostbridge netmaker[2995]: flag provided but not defined: -config
+Jun 17 04:50:14 ghostbridge netmaker[2995]: Usage of /usr/local/bin/netmaker:
+Jun 17 04:50:14 ghostbridge netmaker[2995]:   -c string
+Jun 17 04:50:14 ghostbridge netmaker[2995]:             absolute path to configuration file
+Jun 17 04:50:14 ghostbridge systemd[1]: netmaker.service: Main process exited, code=exited, status=2/INVALIDARGUMENT
+Jun 17 04:50:14 ghostbridge systemd[1]: netmaker.service: Failed with result 'exit-code'.
+Jun 17 04:50:15 ghostbridge bash[3048]: escript: exception throw: {emqx_conf_schema,[#{reason => required_field,
+Jun 17 04:50:15 ghostbridge bash[3048]:                                       path => "node.data_dir",
+Jun 17 04:50:15 ghostbridge bash[3048]:                                       kind => validation_error}]}
+Jun 17 04:50:15 ghostbridge bash[3048]:   in function  hocon_tconf:assert/2 (hocon_tconf.erl, line 1234)
+Jun 17 04:50:15 ghostbridge bash[3048]:   in call from hocon_tconf:map/4 (hocon_tconf.erl, line 303)
+Jun 17 04:50:15 ghostbridge bash[3048]:   in call from hocon_cli:get_values/3 (hocon_cli.erl, line 194)
+Jun 17 04:50:15 ghostbridge bash[3048]:   in call from hocon_cli:multi_get/2 (hocon_cli.erl, line 182)
+Jun 17 04:50:15 ghostbridge bash[3048]:   in call from escript:run/2 (escript.erl, line 750)
+Jun 17 04:50:15 ghostbridge bash[3048]:   in call from escript:start/1 (escript.erl, line 277)
+Jun 17 04:50:15 ghostbridge bash[3048]:   in call from init:start_em/1
+Jun 17 04:50:15 ghostbridge bash[3048]:   in call from init:do_boot/3
+Jun 17 04:50:15 ghostbridge bash[3047]: ERROR: call_hocon_failed: -s emqx_conf_schema -c /etc/emqx/emqx.conf multi_get node.data_dir node.name node.cookie node.db_backend cluster.proto_dist node.dist_net_ticktime
+Jun 17 04:50:15 ghostbridge systemd[1]: emqx.service: Main process exited, code=exited, status=127/n/a
+Jun 17 04:50:15 ghostbridge systemd[1]: emqx.service: Failed with result 'exit-code'.
+Jun 17 04:50:20 ghostbridge systemd[1]: netmaker.service: Scheduled restart job, restart counter is at 21.
+Jun 17 04:50:20 ghostbridge systemd[1]: Stopped netmaker.service - Netmaker Server.
+Jun 17 04:52:15 ghostbridge systemd[1]: emqx.service: Scheduled restart job, restart counter is at 21.
+Jun 17 04:52:15 ghostbridge systemd[1]: Stopped emqx.service - emqx daemon.
+Jun 17 04:52:15 ghostbridge systemd[1]: Started emqx.service - emqx daemon.
+Jun 17 04:52:15 ghostbridge systemd[1]: Started netmaker.service - Netmaker Server.
+Jun 17 04:52:15 ghostbridge netmaker[3074]: flag provided but not defined: -config
+Jun 17 04:52:15 ghostbridge netmaker[3074]: Usage of /usr/local/bin/netmaker:
+Jun 17 04:52:15 ghostbridge netmaker[3074]:   -c string
+Jun 17 04:52:15 ghostbridge netmaker[3074]:             absolute path to configuration file
+Jun 17 04:52:15 ghostbridge systemd[1]: netmaker.service: Main process exited, code=exited, status=2/INVALIDARGUMENT
+Jun 17 04:52:15 ghostbridge systemd[1]: netmaker.service: Failed with result 'exit-code'.
+Jun 17 04:52:16 ghostbridge bash[3127]: escript: exception throw: {emqx_conf_schema,[#{reason => required_field,
+Jun 17 04:52:16 ghostbridge bash[3127]:                                       path => "node.data_dir",
+Jun 17 04:52:16 ghostbridge bash[3127]:                                       kind => validation_error}]}
+Jun 17 04:52:16 ghostbridge bash[3127]:   in function  hocon_tconf:assert/2 (hocon_tconf.erl, line 1234)
+Jun 17 04:52:16 ghostbridge bash[3127]:   in call from hocon_tconf:map/4 (hocon_tconf.erl, line 303)
+Jun 17 04:52:16 ghostbridge bash[3127]:   in call from hocon_cli:get_values/3 (hocon_cli.erl, line 194)
+Jun 17 04:52:16 ghostbridge bash[3127]:   in call from hocon_cli:multi_get/2 (hocon_cli.erl, line 182)
+Jun 17 04:52:16 ghostbridge bash[3127]:   in call from escript:run/2 (escript.erl, line 750)
+Jun 17 04:52:16 ghostbridge bash[3127]:   in call from escript:start/1 (escript.erl, line 277)
+Jun 17 04:52:16 ghostbridge bash[3127]:   in call from init:start_em/1
+Jun 17 04:52:16 ghostbridge bash[3127]:   in call from init:do_boot/3
+Jun 17 04:52:16 ghostbridge bash[3126]: ERROR: call_hocon_failed: -s emqx_conf_schema -c /etc/emqx/emqx.conf multi_get node.data_dir node.name node.cookie node.db_backend cluster.proto_dist node.dist_net_ticktime
+Jun 17 04:52:16 ghostbridge systemd[1]: emqx.service: Main process exited, code=exited, status=127/n/a
+Jun 17 04:52:16 ghostbridge systemd[1]: emqx.service: Failed with result 'exit-code'.
+Jun 17 04:52:20 ghostbridge systemd[1]: netmaker.service: Scheduled restart job, restart counter is at 22.
+Jun 17 04:52:20 ghostbridge systemd[1]: Stopped netmaker.service - Netmaker Server.
+Jun 17 04:54:16 ghostbridge systemd[1]: emqx.service: Scheduled restart job, restart counter is at 22.
+Jun 17 04:54:16 ghostbridge systemd[1]: Stopped emqx.service - emqx daemon.
+Jun 17 04:54:16 ghostbridge systemd[1]: Started emqx.service - emqx daemon.
+Jun 17 04:54:16 ghostbridge systemd[1]: Started netmaker.service - Netmaker Server.
+Jun 17 04:54:16 ghostbridge netmaker[3149]: flag provided but not defined: -config
+Jun 17 04:54:16 ghostbridge netmaker[3149]: Usage of /usr/local/bin/netmaker:
+Jun 17 04:54:16 ghostbridge netmaker[3149]:   -c string
+Jun 17 04:54:16 ghostbridge netmaker[3149]:             absolute path to configuration file
+Jun 17 04:54:16 ghostbridge systemd[1]: netmaker.service: Main process exited, code=exited, status=2/INVALIDARGUMENT
+Jun 17 04:54:16 ghostbridge systemd[1]: netmaker.service: Failed with result 'exit-code'.
+Jun 17 04:54:16 ghostbridge bash[3202]: escript: exception throw: {emqx_conf_schema,[#{reason => required_field,
+Jun 17 04:54:16 ghostbridge bash[3202]:                                       path => "node.data_dir",
+Jun 17 04:54:16 ghostbridge bash[3202]:                                       kind => validation_error}]}
+Jun 17 04:54:16 ghostbridge bash[3202]:   in function  hocon_tconf:assert/2 (hocon_tconf.erl, line 1234)
+Jun 17 04:54:16 ghostbridge bash[3202]:   in call from hocon_tconf:map/4 (hocon_tconf.erl, line 303)
+Jun 17 04:54:16 ghostbridge bash[3202]:   in call from hocon_cli:get_values/3 (hocon_cli.erl, line 194)
+Jun 17 04:54:16 ghostbridge bash[3202]:   in call from hocon_cli:multi_get/2 (hocon_cli.erl, line 182)
+Jun 17 04:54:16 ghostbridge bash[3202]:   in call from escript:run/2 (escript.erl, line 750)
+Jun 17 04:54:16 ghostbridge bash[3202]:   in call from escript:start/1 (escript.erl, line 277)
+Jun 17 04:54:16 ghostbridge bash[3202]:   in call from init:start_em/1
+Jun 17 04:54:16 ghostbridge bash[3202]:   in call from init:do_boot/3
+Jun 17 04:54:16 ghostbridge bash[3201]: ERROR: call_hocon_failed: -s emqx_conf_schema -c /etc/emqx/emqx.conf multi_get node.data_dir node.name node.cookie node.db_backend cluster.proto_dist node.dist_net_ticktime
+Jun 17 04:54:16 ghostbridge systemd[1]: emqx.service: Main process exited, code=exited, status=127/n/a
+Jun 17 04:54:16 ghostbridge systemd[1]: emqx.service: Failed with result 'exit-code'.
+Jun 17 04:54:21 ghostbridge systemd[1]: netmaker.service: Scheduled restart job, restart counter is at 23.
+Jun 17 04:54:21 ghostbridge systemd[1]: Stopped netmaker.service - Netmaker Server.
+Jun 17 04:56:16 ghostbridge systemd[1]: emqx.service: Scheduled restart job, restart counter is at 23.
+Jun 17 04:56:16 ghostbridge systemd[1]: Stopped emqx.service - emqx daemon.
+Jun 17 04:56:16 ghostbridge systemd[1]: Started emqx.service - emqx daemon.
+Jun 17 04:56:16 ghostbridge systemd[1]: Started netmaker.service - Netmaker Server.
+Jun 17 04:56:16 ghostbridge netmaker[3224]: flag provided but not defined: -config
+Jun 17 04:56:16 ghostbridge netmaker[3224]: Usage of /usr/local/bin/netmaker:
+Jun 17 04:56:16 ghostbridge netmaker[3224]:   -c string
+Jun 17 04:56:16 ghostbridge netmaker[3224]:             absolute path to configuration file
+Jun 17 04:56:16 ghostbridge systemd[1]: netmaker.service: Main process exited, code=exited, status=2/INVALIDARGUMENT
+Jun 17 04:56:16 ghostbridge systemd[1]: netmaker.service: Failed with result 'exit-code'.
+Jun 17 04:56:17 ghostbridge bash[3277]: escript: exception throw: {emqx_conf_schema,[#{reason => required_field,
+Jun 17 04:56:17 ghostbridge bash[3277]:                                       path => "node.data_dir",
+Jun 17 04:56:17 ghostbridge bash[3277]:                                       kind => validation_error}]}
+Jun 17 04:56:17 ghostbridge bash[3277]:   in function  hocon_tconf:assert/2 (hocon_tconf.erl, line 1234)
+Jun 17 04:56:17 ghostbridge bash[3277]:   in call from hocon_tconf:map/4 (hocon_tconf.erl, line 303)
+Jun 17 04:56:17 ghostbridge bash[3277]:   in call from hocon_cli:get_values/3 (hocon_cli.erl, line 194)
+Jun 17 04:56:17 ghostbridge bash[3277]:   in call from hocon_cli:multi_get/2 (hocon_cli.erl, line 182)
+Jun 17 04:56:17 ghostbridge bash[3277]:   in call from escript:run/2 (escript.erl, line 750)
+Jun 17 04:56:17 ghostbridge bash[3277]:   in call from escript:start/1 (escript.erl, line 277)
+Jun 17 04:56:17 ghostbridge bash[3277]:   in call from init:start_em/1
+Jun 17 04:56:17 ghostbridge bash[3277]:   in call from init:do_boot/3
+Jun 17 04:56:17 ghostbridge bash[3276]: ERROR: call_hocon_failed: -s emqx_conf_schema -c /etc/emqx/emqx.conf multi_get node.data_dir node.name node.cookie node.db_backend cluster.proto_dist node.dist_net_ticktime
+Jun 17 04:56:17 ghostbridge systemd[1]: emqx.service: Main process exited, code=exited, status=127/n/a
+Jun 17 04:56:17 ghostbridge systemd[1]: emqx.service: Failed with result 'exit-code'.
+Jun 17 04:56:22 ghostbridge systemd[1]: netmaker.service: Scheduled restart job, restart counter is at 24.
+Jun 17 04:56:22 ghostbridge systemd[1]: Stopped netmaker.service - Netmaker Server.
+Jun 17 04:56:48 ghostbridge su[3300]: (to emqx) root on pts/3
+Jun 17 04:56:48 ghostbridge su[3300]: pam_unix(su-l:session): session opened for user emqx(uid=103) by (uid=0)
+Jun 17 04:56:48 ghostbridge su[3300]: pam_systemd(su-l:session): Failed to create session: Seat has no VTs but VT number not 0
+Jun 17 04:56:48 ghostbridge su[3300]: pam_unix(su-l:session): session closed for user emqx
+Jun 17 04:58:17 ghostbridge systemd[1]: emqx.service: Scheduled restart job, restart counter is at 24.
+Jun 17 04:58:17 ghostbridge systemd[1]: Stopped emqx.service - emqx daemon.
+Jun 17 04:58:17 ghostbridge systemd[1]: Started emqx.service - emqx daemon.
+Jun 17 04:58:17 ghostbridge systemd[1]: Started netmaker.service - Netmaker Server.
+Jun 17 04:58:17 ghostbridge netmaker[3384]: flag provided but not defined: -config
+Jun 17 04:58:17 ghostbridge netmaker[3384]: Usage of /usr/local/bin/netmaker:
+Jun 17 04:58:17 ghostbridge netmaker[3384]:   -c string
+Jun 17 04:58:17 ghostbridge netmaker[3384]:             absolute path to configuration file
+Jun 17 04:58:17 ghostbridge systemd[1]: netmaker.service: Main process exited, code=exited, status=2/INVALIDARGUMENT
+Jun 17 04:58:17 ghostbridge systemd[1]: netmaker.service: Failed with result 'exit-code'.
+Jun 17 04:58:18 ghostbridge bash[3437]: escript: exception throw: {emqx_conf_schema,[#{reason => required_field,
+Jun 17 04:58:18 ghostbridge bash[3437]:                                       path => "node.data_dir",
+Jun 17 04:58:18 ghostbridge bash[3437]:                                       kind => validation_error}]}
+Jun 17 04:58:18 ghostbridge bash[3437]:   in function  hocon_tconf:assert/2 (hocon_tconf.erl, line 1234)
+Jun 17 04:58:18 ghostbridge bash[3437]:   in call from hocon_tconf:map/4 (hocon_tconf.erl, line 303)
+Jun 17 04:58:18 ghostbridge bash[3437]:   in call from hocon_cli:get_values/3 (hocon_cli.erl, line 194)
+Jun 17 04:58:18 ghostbridge bash[3437]:   in call from hocon_cli:multi_get/2 (hocon_cli.erl, line 182)
+Jun 17 04:58:18 ghostbridge bash[3437]:   in call from escript:run/2 (escript.erl, line 750)
+Jun 17 04:58:18 ghostbridge bash[3437]:   in call from escript:start/1 (escript.erl, line 277)
+Jun 17 04:58:18 ghostbridge bash[3437]:   in call from init:start_em/1
+Jun 17 04:58:18 ghostbridge bash[3437]:   in call from init:do_boot/3
+Jun 17 04:58:18 ghostbridge bash[3436]: ERROR: call_hocon_failed: -s emqx_conf_schema -c /etc/emqx/emqx.conf multi_get node.data_dir node.name node.cookie node.db_backend cluster.proto_dist node.dist_net_ticktime
+Jun 17 04:58:18 ghostbridge systemd[1]: emqx.service: Main process exited, code=exited, status=127/n/a
+Jun 17 04:58:18 ghostbridge systemd[1]: emqx.service: Failed with result 'exit-code'.
+Jun 17 04:58:22 ghostbridge systemd[1]: netmaker.service: Scheduled restart job, restart counter is at 25.
+Jun 17 04:58:22 ghostbridge systemd[1]: Stopped netmaker.service - Netmaker Server.
+Jun 17 04:59:40 ghostbridge su[3460]: (to emqx) root on pts/3
+Jun 17 04:59:40 ghostbridge su[3460]: pam_unix(su-l:session): session opened for user emqx(uid=103) by (uid=0)
+Jun 17 04:59:40 ghostbridge su[3460]: pam_systemd(su-l:session): Failed to create session: Seat has no VTs but VT number not 0
+Jun 17 04:59:40 ghostbridge su[3460]: pam_unix(su-l:session): session closed for user emqx
+Jun 17 05:00:18 ghostbridge systemd[1]: emqx.service: Scheduled restart job, restart counter is at 25.
+Jun 17 05:00:18 ghostbridge systemd[1]: Stopped emqx.service - emqx daemon.
+Jun 17 05:00:18 ghostbridge systemd[1]: Started emqx.service - emqx daemon.
+Jun 17 05:00:18 ghostbridge systemd[1]: Started netmaker.service - Netmaker Server.
+Jun 17 05:00:18 ghostbridge netmaker[3543]: flag provided but not defined: -config
+Jun 17 05:00:18 ghostbridge netmaker[3543]: Usage of /usr/local/bin/netmaker:
+Jun 17 05:00:18 ghostbridge netmaker[3543]:   -c string
+Jun 17 05:00:18 ghostbridge netmaker[3543]:             absolute path to configuration file
+Jun 17 05:00:18 ghostbridge systemd[1]: netmaker.service: Main process exited, code=exited, status=2/INVALIDARGUMENT
+Jun 17 05:00:18 ghostbridge systemd[1]: netmaker.service: Failed with result 'exit-code'.
+Jun 17 05:00:18 ghostbridge bash[3598]: escript: exception throw: {emqx_conf_schema,[#{reason => required_field,
+Jun 17 05:00:18 ghostbridge bash[3598]:                                       path => "node.data_dir",
+Jun 17 05:00:18 ghostbridge bash[3598]:                                       kind => validation_error}]}
+Jun 17 05:00:18 ghostbridge bash[3598]:   in function  hocon_tconf:assert/2 (hocon_tconf.erl, line 1234)
+Jun 17 05:00:18 ghostbridge bash[3598]:   in call from hocon_tconf:map/4 (hocon_tconf.erl, line 303)
+Jun 17 05:00:18 ghostbridge bash[3598]:   in call from hocon_cli:get_values/3 (hocon_cli.erl, line 194)
+Jun 17 05:00:18 ghostbridge bash[3598]:   in call from hocon_cli:multi_get/2 (hocon_cli.erl, line 182)
+Jun 17 05:00:18 ghostbridge bash[3598]:   in call from escript:run/2 (escript.erl, line 750)
+Jun 17 05:00:18 ghostbridge bash[3598]:   in call from escript:start/1 (escript.erl, line 277)
+Jun 17 05:00:18 ghostbridge bash[3598]:   in call from init:start_em/1
+Jun 17 05:00:18 ghostbridge bash[3598]:   in call from init:do_boot/3
+Jun 17 05:00:18 ghostbridge bash[3597]: ERROR: call_hocon_failed: -s emqx_conf_schema -c /etc/emqx/emqx.conf multi_get node.data_dir node.name node.cookie node.db_backend cluster.proto_dist node.dist_net_ticktime
+Jun 17 05:00:18 ghostbridge systemd[1]: emqx.service: Main process exited, code=exited, status=127/n/a
+Jun 17 05:00:18 ghostbridge systemd[1]: emqx.service: Failed with result 'exit-code'.
+Jun 17 05:00:23 ghostbridge systemd[1]: netmaker.service: Scheduled restart job, restart counter is at 26.
+Jun 17 05:00:23 ghostbridge systemd[1]: Stopped netmaker.service - Netmaker Server.
+Jun 17 05:02:19 ghostbridge systemd[1]: emqx.service: Scheduled restart job, restart counter is at 26.
+Jun 17 05:02:19 ghostbridge systemd[1]: Stopped emqx.service - emqx daemon.
+Jun 17 05:02:19 ghostbridge systemd[1]: Started emqx.service - emqx daemon.
+Jun 17 05:02:19 ghostbridge systemd[1]: Started netmaker.service - Netmaker Server.
+Jun 17 05:02:19 ghostbridge netmaker[3625]: flag provided but not defined: -config
+Jun 17 05:02:19 ghostbridge netmaker[3625]: Usage of /usr/local/bin/netmaker:
+Jun 17 05:02:19 ghostbridge netmaker[3625]:   -c string
+Jun 17 05:02:19 ghostbridge netmaker[3625]:             absolute path to configuration file
+Jun 17 05:02:19 ghostbridge systemd[1]: netmaker.service: Main process exited, code=exited, status=2/INVALIDARGUMENT
+Jun 17 05:02:19 ghostbridge systemd[1]: netmaker.service: Failed with result 'exit-code'.
+Jun 17 05:02:19 ghostbridge bash[3678]: escript: exception throw: {emqx_conf_schema,[#{reason => required_field,
+Jun 17 05:02:19 ghostbridge bash[3678]:                                       path => "node.data_dir",
+Jun 17 05:02:19 ghostbridge bash[3678]:                                       kind => validation_error}]}
+Jun 17 05:02:19 ghostbridge bash[3678]:   in function  hocon_tconf:assert/2 (hocon_tconf.erl, line 1234)
+Jun 17 05:02:19 ghostbridge bash[3678]:   in call from hocon_tconf:map/4 (hocon_tconf.erl, line 303)
+Jun 17 05:02:19 ghostbridge bash[3678]:   in call from hocon_cli:get_values/3 (hocon_cli.erl, line 194)
+Jun 17 05:02:19 ghostbridge bash[3678]:   in call from hocon_cli:multi_get/2 (hocon_cli.erl, line 182)
+Jun 17 05:02:19 ghostbridge bash[3678]:   in call from escript:run/2 (escript.erl, line 750)
+Jun 17 05:02:19 ghostbridge bash[3678]:   in call from escript:start/1 (escript.erl, line 277)
+Jun 17 05:02:19 ghostbridge bash[3678]:   in call from init:start_em/1
+Jun 17 05:02:19 ghostbridge bash[3678]:   in call from init:do_boot/3
+Jun 17 05:02:19 ghostbridge bash[3677]: ERROR: call_hocon_failed: -s emqx_conf_schema -c /etc/emqx/emqx.conf multi_get node.data_dir node.name node.cookie node.db_backend cluster.proto_dist node.dist_net_ticktime
+Jun 17 05:02:19 ghostbridge systemd[1]: emqx.service: Main process exited, code=exited, status=127/n/a
+Jun 17 05:02:19 ghostbridge systemd[1]: emqx.service: Failed with result 'exit-code'.
+Jun 17 05:02:24 ghostbridge systemd[1]: netmaker.service: Scheduled restart job, restart counter is at 27.
+Jun 17 05:02:24 ghostbridge systemd[1]: Stopped netmaker.service - Netmaker Server.
+Jun 17 05:04:19 ghostbridge systemd[1]: emqx.service: Scheduled restart job, restart counter is at 27.
+Jun 17 05:04:19 ghostbridge systemd[1]: Stopped emqx.service - emqx daemon.
+Jun 17 05:04:19 ghostbridge systemd[1]: Started emqx.service - emqx daemon.
+Jun 17 05:04:19 ghostbridge systemd[1]: Started netmaker.service - Netmaker Server.
+Jun 17 05:04:19 ghostbridge netmaker[3702]: flag provided but not defined: -config
+Jun 17 05:04:19 ghostbridge netmaker[3702]: Usage of /usr/local/bin/netmaker:
+Jun 17 05:04:19 ghostbridge netmaker[3702]:   -c string
+Jun 17 05:04:19 ghostbridge netmaker[3702]:             absolute path to configuration file
+Jun 17 05:04:19 ghostbridge systemd[1]: netmaker.service: Main process exited, code=exited, status=2/INVALIDARGUMENT
+Jun 17 05:04:19 ghostbridge systemd[1]: netmaker.service: Failed with result 'exit-code'.
+Jun 17 05:04:20 ghostbridge bash[3755]: escript: exception throw: {emqx_conf_schema,[#{reason => required_field,
+Jun 17 05:04:20 ghostbridge bash[3755]:                                       path => "node.data_dir",
+Jun 17 05:04:20 ghostbridge bash[3755]:                                       kind => validation_error}]}
+Jun 17 05:04:20 ghostbridge bash[3755]:   in function  hocon_tconf:assert/2 (hocon_tconf.erl, line 1234)
+Jun 17 05:04:20 ghostbridge bash[3755]:   in call from hocon_tconf:map/4 (hocon_tconf.erl, line 303)
+Jun 17 05:04:20 ghostbridge bash[3755]:   in call from hocon_cli:get_values/3 (hocon_cli.erl, line 194)
+Jun 17 05:04:20 ghostbridge bash[3755]:   in call from hocon_cli:multi_get/2 (hocon_cli.erl, line 182)
+Jun 17 05:04:20 ghostbridge bash[3755]:   in call from escript:run/2 (escript.erl, line 750)
+Jun 17 05:04:20 ghostbridge bash[3755]:   in call from escript:start/1 (escript.erl, line 277)
+Jun 17 05:04:20 ghostbridge bash[3755]:   in call from init:start_em/1
+Jun 17 05:04:20 ghostbridge bash[3755]:   in call from init:do_boot/3
+Jun 17 05:04:20 ghostbridge bash[3754]: ERROR: call_hocon_failed: -s emqx_conf_schema -c /etc/emqx/emqx.conf multi_get node.data_dir node.name node.cookie node.db_backend cluster.proto_dist node.dist_net_ticktime
+Jun 17 05:04:20 ghostbridge systemd[1]: emqx.service: Main process exited, code=exited, status=127/n/a
+Jun 17 05:04:20 ghostbridge systemd[1]: emqx.service: Failed with result 'exit-code'.
+Jun 17 05:04:24 ghostbridge systemd[1]: netmaker.service: Scheduled restart job, restart counter is at 28.
+Jun 17 05:04:24 ghostbridge systemd[1]: Stopped netmaker.service - Netmaker Server.
+Jun 17 05:06:20 ghostbridge systemd[1]: emqx.service: Scheduled restart job, restart counter is at 28.
+Jun 17 05:06:20 ghostbridge systemd[1]: Stopped emqx.service - emqx daemon.
+Jun 17 05:06:20 ghostbridge systemd[1]: Started emqx.service - emqx daemon.
+Jun 17 05:06:20 ghostbridge systemd[1]: Started netmaker.service - Netmaker Server.
+Jun 17 05:06:20 ghostbridge netmaker[3778]: flag provided but not defined: -config
+Jun 17 05:06:20 ghostbridge netmaker[3778]: Usage of /usr/local/bin/netmaker:
+Jun 17 05:06:20 ghostbridge netmaker[3778]:   -c string
+Jun 17 05:06:20 ghostbridge netmaker[3778]:             absolute path to configuration file
+Jun 17 05:06:20 ghostbridge systemd[1]: netmaker.service: Main process exited, code=exited, status=2/INVALIDARGUMENT
+Jun 17 05:06:20 ghostbridge systemd[1]: netmaker.service: Failed with result 'exit-code'.
+Jun 17 05:06:21 ghostbridge bash[3831]: escript: exception throw: {emqx_conf_schema,[#{reason => required_field,
+Jun 17 05:06:21 ghostbridge bash[3831]:                                       path => "node.data_dir",
+Jun 17 05:06:21 ghostbridge bash[3831]:                                       kind => validation_error}]}
+Jun 17 05:06:21 ghostbridge bash[3831]:   in function  hocon_tconf:assert/2 (hocon_tconf.erl, line 1234)
+Jun 17 05:06:21 ghostbridge bash[3831]:   in call from hocon_tconf:map/4 (hocon_tconf.erl, line 303)
+Jun 17 05:06:21 ghostbridge bash[3831]:   in call from hocon_cli:get_values/3 (hocon_cli.erl, line 194)
+Jun 17 05:06:21 ghostbridge bash[3831]:   in call from hocon_cli:multi_get/2 (hocon_cli.erl, line 182)
+Jun 17 05:06:21 ghostbridge bash[3831]:   in call from escript:run/2 (escript.erl, line 750)
+Jun 17 05:06:21 ghostbridge bash[3831]:   in call from escript:start/1 (escript.erl, line 277)
+Jun 17 05:06:21 ghostbridge bash[3831]:   in call from init:start_em/1
+Jun 17 05:06:21 ghostbridge bash[3831]:   in call from init:do_boot/3
+Jun 17 05:06:21 ghostbridge bash[3830]: ERROR: call_hocon_failed: -s emqx_conf_schema -c /etc/emqx/emqx.conf multi_get node.data_dir node.name node.cookie node.db_backend cluster.proto_dist node.dist_net_ticktime
+Jun 17 05:06:21 ghostbridge systemd[1]: emqx.service: Main process exited, code=exited, status=127/n/a
+Jun 17 05:06:21 ghostbridge systemd[1]: emqx.service: Failed with result 'exit-code'.
+Jun 17 05:06:25 ghostbridge systemd[1]: netmaker.service: Scheduled restart job, restart counter is at 29.
+Jun 17 05:06:25 ghostbridge systemd[1]: Stopped netmaker.service - Netmaker Server.
+Jun 17 05:08:09 ghostbridge su[3854]: (to emqx) root on pts/3
+Jun 17 05:08:09 ghostbridge su[3854]: pam_unix(su-l:session): session opened for user emqx(uid=103) by (uid=0)
+Jun 17 05:08:09 ghostbridge su[3854]: pam_systemd(su-l:session): Failed to create session: Seat has no VTs but VT number not 0
+Jun 17 05:08:09 ghostbridge su[3854]: pam_unix(su-l:session): session closed for user emqx
+Jun 17 05:08:21 ghostbridge systemd[1]: emqx.service: Scheduled restart job, restart counter is at 29.
+Jun 17 05:08:21 ghostbridge systemd[1]: Stopped emqx.service - emqx daemon.
+Jun 17 05:08:21 ghostbridge systemd[1]: Started emqx.service - emqx daemon.
+Jun 17 05:08:21 ghostbridge systemd[1]: Started netmaker.service - Netmaker Server.
+Jun 17 05:08:21 ghostbridge netmaker[3939]: flag provided but not defined: -config
+Jun 17 05:08:21 ghostbridge netmaker[3939]: Usage of /usr/local/bin/netmaker:
+Jun 17 05:08:21 ghostbridge netmaker[3939]:   -c string
+Jun 17 05:08:21 ghostbridge netmaker[3939]:             absolute path to configuration file
+Jun 17 05:08:21 ghostbridge systemd[1]: netmaker.service: Main process exited, code=exited, status=2/INVALIDARGUMENT
+Jun 17 05:08:21 ghostbridge systemd[1]: netmaker.service: Failed with result 'exit-code'.
+Jun 17 05:08:21 ghostbridge bash[3938]: ERROR: emqx.conf is not found in /etc/emqx
+Jun 17 05:08:21 ghostbridge systemd[1]: emqx.service: Main process exited, code=exited, status=1/FAILURE
+Jun 17 05:08:21 ghostbridge systemd[1]: emqx.service: Failed with result 'exit-code'.
+Jun 17 05:08:25 ghostbridge systemd[1]: Stopped netmaker.service - Netmaker Server.
+Jun 17 05:08:25 ghostbridge systemd[1]: Stopped emqx.service - emqx daemon.
+Jun 17 05:08:40 ghostbridge su[3995]: (to emqx) root on pts/3
+Jun 17 05:08:40 ghostbridge su[3995]: pam_unix(su-l:session): session opened for user emqx(uid=103) by (uid=0)
+Jun 17 05:08:40 ghostbridge su[3995]: pam_systemd(su-l:session): Failed to create session: Seat has no VTs but VT number not 0
+Jun 17 05:08:40 ghostbridge su[3995]: pam_unix(su-l:session): session closed for user emqx
+Jun 17 05:08:43 ghostbridge su[4114]: (to emqx) root on pts/3
+Jun 17 05:08:43 ghostbridge su[4114]: pam_unix(su-l:session): session opened for user emqx(uid=103) by (uid=0)
+Jun 17 05:08:43 ghostbridge su[4114]: pam_systemd(su-l:session): Failed to create session: Seat has no VTs but VT number not 0
+Jun 17 05:08:44 ghostbridge su[4114]: pam_unix(su-l:session): session closed for user emqx
+Jun 17 05:11:50 ghostbridge su[4231]: (to emqx) root on pts/3
+Jun 17 05:11:50 ghostbridge su[4231]: pam_unix(su-l:session): session opened for user emqx(uid=103) by (uid=0)
+Jun 17 05:11:50 ghostbridge su[4231]: pam_systemd(su-l:session): Failed to create session: Seat has no VTs but VT number not 0
+Jun 17 05:11:50 ghostbridge su[4231]: pam_unix(su-l:session): session closed for user emqx
+Jun 17 05:11:51 ghostbridge systemd[1]: Started emqx.service - emqx daemon.
+Jun 17 05:11:51 ghostbridge bash[4348]: ERROR: emqx.conf is not found in /etc/emqx
+Jun 17 05:11:51 ghostbridge systemd[1]: emqx.service: Main process exited, code=exited, status=1/FAILURE
+Jun 17 05:11:51 ghostbridge systemd[1]: emqx.service: Failed with result 'exit-code'.
+Jun 17 05:11:55 ghostbridge systemd[1]: Stopped emqx.service - emqx daemon.
+Jun 17 05:12:09 ghostbridge su[4400]: (to emqx) root on pts/3
+Jun 17 05:12:09 ghostbridge su[4400]: pam_unix(su-l:session): session opened for user emqx(uid=103) by (uid=0)
+Jun 17 05:12:09 ghostbridge su[4400]: pam_systemd(su-l:session): Failed to create session: Seat has no VTs but VT number not 0
+Jun 17 05:12:10 ghostbridge su[4400]: pam_unix(su-l:session): session closed for user emqx
+Jun 17 05:12:12 ghostbridge su[4518]: (to emqx) root on pts/3
+Jun 17 05:12:12 ghostbridge su[4518]: pam_unix(su-l:session): session opened for user emqx(uid=103) by (uid=0)
+Jun 17 05:12:12 ghostbridge su[4518]: pam_systemd(su-l:session): Failed to create session: Seat has no VTs but VT number not 0
+Jun 17 05:12:12 ghostbridge su[4518]: pam_unix(su-l:session): session closed for user emqx
+Jun 17 05:12:36 ghostbridge su[4634]: (to emqx) root on pts/3
+Jun 17 05:12:36 ghostbridge su[4634]: pam_unix(su-l:session): session opened for user emqx(uid=103) by (uid=0)
+Jun 17 05:12:36 ghostbridge su[4634]: pam_systemd(su-l:session): Failed to create session: Seat has no VTs but VT number not 0
+Jun 17 05:12:37 ghostbridge su[4634]: pam_unix(su-l:session): session closed for user emqx
+Jun 17 05:15:01 ghostbridge CRON[4752]: pam_unix(cron:session): session opened for user root(uid=0) by (uid=0)
+Jun 17 05:15:01 ghostbridge CRON[4753]: (root) CMD (cd / && run-parts --report /etc/cron.hourly)
+Jun 17 05:15:01 ghostbridge CRON[4752]: pam_unix(cron:session): session closed for user root

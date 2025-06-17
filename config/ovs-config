@@ -1,0 +1,31 @@
+# OpenVSwitch bridge name
+# This is the bridge your Netmaker interface will be added to.
+# Ensure this bridge exists or will be created by the install script.
+BRIDGE_NAME=ovsbr0
+
+# Netmaker interface pattern
+# This pattern is used to identify the Netmaker network interface.
+# Typically, Netmaker interfaces are named like 'nm-...' or 'netmaker-...'.
+# Adjust if your Netmaker interface names follow a different pattern.
+NM_INTERFACE_PATTERN="nm-*"
+
+# Obfuscation Settings
+# Enable mild obfuscation for privacy protection (minimal performance impact)
+ENABLE_OBFUSCATION=true
+
+# VLAN obfuscation - randomly rotate VLAN tags
+VLAN_OBFUSCATION=true
+VLAN_POOL="100,200,300,400,500"  # Available VLAN tags for rotation
+VLAN_ROTATION_INTERVAL=300        # Seconds between VLAN rotations
+
+# MAC address randomization
+MAC_RANDOMIZATION=true
+MAC_ROTATION_INTERVAL=1800        # Seconds between MAC changes
+
+# Basic timing obfuscation
+TIMING_OBFUSCATION=true
+MAX_DELAY_MS=50                   # Maximum delay in milliseconds
+
+# Traffic pattern obfuscation
+TRAFFIC_SHAPING=true
+SHAPING_RATE_MBPS=100             # Rate limit for traffic shaping

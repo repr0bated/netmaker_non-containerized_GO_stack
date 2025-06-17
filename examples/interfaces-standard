@@ -1,0 +1,46 @@
+# Corrected /etc/network/interfaces following OVS Debian guidelines
+# Configuration from sourced files, so do not attempt to move any of
+# the PVE managed interfaces into external files!
+
+auto lo
+iface lo inet loopback
+
+iface wlp2s0 inet manual
+
+# OVS Bridge ovsbr0 (Netmaker bridge)
+allow-ovs ovsbr0
+iface ovsbr0 inet manual
+    ovs_type OVSBridge
+    ovs_ports nm-int
+
+# OVS Internal Port for Netmaker network
+allow-ovsbr0 nm-int
+iface nm-int inet static
+    address 100.104.70.2/24
+    ovs_bridge ovsbr0
+    ovs_type OVSIntPort
+
+# OVS Bridge ovsbr1 (Management bridge)
+allow-ovs ovsbr1
+iface ovsbr1 inet manual
+    ovs_type OVSBridge
+    ovs_ports eth0 mgmt-int
+    mtu 1500
+
+# Physical port eth0 (connected to ovsbr1)
+allow-ovsbr1 eth0
+iface eth0 inet manual
+    ovs_bridge ovsbr1
+    ovs_type OVSPort
+    mtu 1500
+
+# OVS Internal Port for management network
+allow-ovsbr1 mgmt-int
+iface mgmt-int inet static
+    address 10.88.88.2/24
+    gateway 10.88.88.1
+    ovs_bridge ovsbr1
+    ovs_type OVSIntPort
+    mtu 1500
+
+source /etc/network/interfaces.d/*

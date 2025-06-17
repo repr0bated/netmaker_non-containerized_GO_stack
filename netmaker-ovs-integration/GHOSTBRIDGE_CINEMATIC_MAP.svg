@@ -1,0 +1,491 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<svg width="1400" height="1000" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">
+  <defs>
+    <!-- Photorealistic textures and patterns -->
+    <pattern id="parchmentTexture" patternUnits="userSpaceOnUse" width="100" height="100">
+      <rect width="100" height="100" fill="#f4f1e8"/>
+      <circle cx="20" cy="30" r="1" fill="#e8dcc0" opacity="0.3"/>
+      <circle cx="70" cy="60" r="0.5" fill="#d4c4a0" opacity="0.4"/>
+      <circle cx="40" cy="80" r="1.5" fill="#e0d5b7" opacity="0.2"/>
+      <line x1="0" y1="25" x2="100" y2="25" stroke="#e8dcc0" stroke-width="0.2" opacity="0.3"/>
+      <line x1="0" y1="75" x2="100" y2="75" stroke="#d4c4a0" stroke-width="0.3" opacity="0.2"/>
+    </pattern>
+    
+    <pattern id="iceTexture" patternUnits="userSpaceOnUse" width="50" height="50">
+      <rect width="50" height="50" fill="#a8c8ec"/>
+      <polygon points="10,5 20,15 5,25 15,35 25,25 35,40 45,30 50,45 40,50 30,40 20,50 10,40 0,50 5,35 15,25 5,15" fill="#b8d4f1" opacity="0.6"/>
+      <circle cx="25" cy="25" r="3" fill="#d6e7f8" opacity="0.4"/>
+      <path d="M5,10 Q15,20 25,10 T45,15" stroke="#e1f0fb" stroke-width="0.5" fill="none" opacity="0.7"/>
+    </pattern>
+    
+    <pattern id="stoneTexture" patternUnits="userSpaceOnUse" width="80" height="80">
+      <rect width="80" height="80" fill="#2c3e50"/>
+      <polygon points="0,20 20,0 40,25 20,40 0,20" fill="#34495e" opacity="0.8"/>
+      <polygon points="40,5 60,20 80,0 80,30 60,45 40,30 40,5" fill="#1a252f" opacity="0.6"/>
+      <polygon points="20,40 40,60 60,45 80,60 80,80 60,80 40,80 20,60 20,40" fill="#34495e" opacity="0.7"/>
+      <circle cx="15" cy="15" r="2" fill="#1a252f" opacity="0.5"/>
+      <circle cx="65" cy="35" r="1.5" fill="#405566" opacity="0.6"/>
+    </pattern>
+    
+    <pattern id="woodTexture" patternUnits="userSpaceOnUse" width="60" height="20">
+      <rect width="60" height="20" fill="#8b4513"/>
+      <line x1="0" y1="3" x2="60" y2="3" stroke="#654321" stroke-width="0.5"/>
+      <line x1="0" y1="7" x2="60" y2="7" stroke="#a0522d" stroke-width="0.3"/>
+      <line x1="0" y1="13" x2="60" y2="13" stroke="#654321" stroke-width="0.5"/>
+      <line x1="0" y1="17" x2="60" y2="17" stroke="#a0522d" stroke-width="0.3"/>
+      <circle cx="10" cy="10" r="0.8" fill="#654321" opacity="0.6"/>
+      <circle cx="35" cy="10" r="1.2" fill="#5d4037" opacity="0.5"/>
+      <circle cx="50" cy="10" r="0.6" fill="#795548" opacity="0.7"/>
+    </pattern>
+    
+    <!-- Advanced lighting and atmospheric effects -->
+    <radialGradient id="iceGlow" cx="50%" cy="50%">
+      <stop offset="0%" style="stop-color:#87ceeb;stop-opacity:0.8"/>
+      <stop offset="40%" style="stop-color:#4682b4;stop-opacity:0.6"/>
+      <stop offset="80%" style="stop-color:#1e3a5f;stop-opacity:0.3"/>
+      <stop offset="100%" style="stop-color:#0f1419;stop-opacity:0.1"/>
+    </radialGradient>
+    
+    <radialGradient id="fireGlow" cx="50%" cy="50%">
+      <stop offset="0%" style="stop-color:#ffd700;stop-opacity:0.9"/>
+      <stop offset="30%" style="stop-color:#ff6347;stop-opacity:0.7"/>
+      <stop offset="60%" style="stop-color:#dc143c;stop-opacity:0.5"/>
+      <stop offset="100%" style="stop-color:#8b0000;stop-opacity:0.2"/>
+    </radialGradient>
+    
+    <linearGradient id="throneGradient" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" style="stop-color:#2c3e50"/>
+      <stop offset="25%" style="stop-color:#34495e"/>
+      <stop offset="50%" style="stop-color:#1a252f"/>
+      <stop offset="75%" style="stop-color:#34495e"/>
+      <stop offset="100%" style="stop-color:#2c3e50"/>
+    </linearGradient>
+    
+    <!-- Snow particle system -->
+    <g id="snowflake">
+      <circle cx="0" cy="0" r="1" fill="white" opacity="0.7"/>
+      <line x1="-2" y1="0" x2="2" y2="0" stroke="white" stroke-width="0.3" opacity="0.5"/>
+      <line x1="0" y1="-2" x2="0" y2="2" stroke="white" stroke-width="0.3" opacity="0.5"/>
+      <line x1="-1.5" y1="-1.5" x2="1.5" y2="1.5" stroke="white" stroke-width="0.2" opacity="0.4"/>
+      <line x1="-1.5" y1="1.5" x2="1.5" y2="-1.5" stroke="white" stroke-width="0.2" opacity="0.4"/>
+    </g>
+    
+    <!-- Advanced shadow and lighting filters -->
+    <filter id="deepShadow" x="-50%" y="-50%" width="200%" height="200%">
+      <feGaussianBlur in="SourceAlpha" stdDeviation="4" result="blur"/>
+      <feOffset in="blur" dx="3" dy="5" result="offsetBlur"/>
+      <feFlood flood-color="#000000" flood-opacity="0.4"/>
+      <feComposite in2="offsetBlur" operator="in"/>
+      <feMerge>
+        <feMergeNode/>
+        <feMergeNode in="SourceGraphic"/>
+      </feMerge>
+    </filter>
+    
+    <filter id="iceEffect" x="-20%" y="-20%" width="140%" height="140%">
+      <feGaussianBlur stdDeviation="2" result="coloredBlur"/>
+      <feOffset in="coloredBlur" dx="0" dy="0" result="offsetBlur"/>
+      <feFlood flood-color="#87ceeb" flood-opacity="0.3"/>
+      <feComposite in2="offsetBlur" operator="in"/>
+      <feMerge>
+        <feMergeNode/>
+        <feMergeNode in="SourceGraphic"/>
+      </feMerge>
+    </filter>
+    
+    <filter id="fireEffect" x="-30%" y="-30%" width="160%" height="160%">
+      <feGaussianBlur stdDeviation="3" result="fireBlur"/>
+      <feOffset in="fireBlur" dx="0" dy="0" result="offsetFire"/>
+      <feFlood flood-color="#ff6347" flood-opacity="0.4"/>
+      <feComposite in2="offsetFire" operator="in"/>
+      <feMerge>
+        <feMergeNode/>
+        <feMergeNode in="SourceGraphic"/>
+      </feMerge>
+    </filter>
+  </defs>
+  
+  <!-- Atmospheric background with aged parchment -->
+  <rect width="1400" height="1000" fill="url(#parchmentTexture)"/>
+  
+  <!-- Atmospheric overlay for depth -->
+  <rect width="1400" height="1000" fill="radial-gradient(circle at 700px 400px, rgba(139,69,19,0.1) 0%, rgba(101,67,33,0.2) 50%, rgba(62,39,35,0.3) 100%)"/>
+  
+  <!-- Burned edges effect -->
+  <path d="M0,0 Q50,20 100,0 T200,15 Q350,5 500,25 T800,10 Q1000,30 1200,5 T1400,0 L1400,50 Q1350,70 1300,50 T1200,80 Q1100,60 1000,85 T800,65 Q650,90 500,70 T200,95 Q100,75 0,90 Z" fill="rgba(101,67,33,0.4)"/>
+  <path d="M0,900 Q100,920 200,905 T500,925 Q700,910 900,930 T1200,915 Q1300,935 1400,920 L1400,1000 L0,1000 Z" fill="rgba(101,67,33,0.4)"/>
+  
+  <!-- Ancient scroll header with realistic aging -->
+  <g id="scrollHeader">
+    <rect x="200" y="30" width="1000" height="120" fill="url(#parchmentTexture)" filter="url(#deepShadow)"/>
+    <rect x="200" y="30" width="1000" height="120" fill="none" stroke="#8b4513" stroke-width="3" stroke-dasharray="10,5" opacity="0.6"/>
+    
+    <!-- Ornate corner decorations -->
+    <circle cx="230" cy="60" r="15" fill="url(#fireGlow)" filter="url(#fireEffect)"/>
+    <circle cx="1170" cy="60" r="15" fill="url(#fireGlow)" filter="url(#fireEffect)"/>
+    <circle cx="230" cy="120" r="15" fill="url(#fireGlow)" filter="url(#fireEffect)"/>
+    <circle cx="1170" cy="120" r="15" fill="url(#fireGlow)" filter="url(#fireEffect)"/>
+    
+    <text x="700" y="70" text-anchor="middle" font-family="Cinzel, serif" font-size="32" font-weight="bold" fill="#2c1810" filter="url(#deepShadow)">
+      THE GHOSTBRIDGE REALM
+    </text>
+    <text x="700" y="105" text-anchor="middle" font-family="Cinzel, serif" font-size="18" fill="#5d4037" opacity="0.8">
+      Network Architecture of the Seven Kingdoms
+    </text>
+    <text x="700" y="130" text-anchor="middle" font-family="Cinzel, serif" font-size="14" fill="#8b4513" opacity="0.6">
+      "Winter is Coming... and So Are the Packets"
+    </text>
+  </g>
+  
+  <!-- The Wall (Massive Ice Barrier) - The Great Firewall -->
+  <g id="theWall">
+    <rect x="100" y="180" width="1200" height="80" fill="url(#iceTexture)" filter="url(#iceEffect)"/>
+    <rect x="100" y="180" width="1200" height="80" fill="url(#iceGlow)" opacity="0.3"/>
+    
+    <!-- Ice wall details with depth -->
+    <polygon points="100,180 150,160 250,170 350,155 450,165 550,150 650,160 750,145 850,155 950,140 1050,150 1150,135 1250,145 1300,130 1300,260 100,260" fill="url(#iceTexture)" opacity="0.8"/>
+    
+    <!-- Icicles hanging down -->
+    <polygon points="200,260 210,280 220,260" fill="#b8d4f1" opacity="0.7"/>
+    <polygon points="400,260 408,275 416,260" fill="#b8d4f1" opacity="0.7"/>
+    <polygon points="600,260 612,285 624,260" fill="#b8d4f1" opacity="0.7"/>
+    <polygon points="800,260 810,278 820,260" fill="#b8d4f1" opacity="0.7"/>
+    <polygon points="1000,260 1008,282 1016,260" fill="#b8d4f1" opacity="0.7"/>
+    <polygon points="1200,260 1212,276 1224,260" fill="#b8d4f1" opacity="0.7"/>
+    
+    <text x="700" y="210" text-anchor="middle" font-family="Cinzel, serif" font-size="20" font-weight="bold" fill="#e1f0fb" filter="url(#iceEffect)">
+      THE GREAT FIREWALL
+    </text>
+    <text x="700" y="235" text-anchor="middle" font-family="Cinzel, serif" font-size="14" fill="#d6e7f8" opacity="0.8">
+      Internet Security Barrier • DDoS Protection • SSL Termination
+    </text>
+    <text x="700" y="250" text-anchor="middle" font-family="Cinzel, serif" font-size="11" fill="#c1ddf3" opacity="0.7">
+      "What is dead may never die, but rises again, harder and stronger"
+    </text>
+  </g>
+  
+  <!-- Snow particles falling -->
+  <g id="fallingSnow" opacity="0.6">
+    <use href="#snowflake" transform="translate(150,300)"/>
+    <use href="#snowflake" transform="translate(300,280)"/>
+    <use href="#snowflake" transform="translate(450,320)"/>
+    <use href="#snowflake" transform="translate(600,295)"/>
+    <use href="#snowflake" transform="translate(750,315)"/>
+    <use href="#snowflake" transform="translate(900,285)"/>
+    <use href="#snowflake" transform="translate(1050,305)"/>
+    <use href="#snowflake" transform="translate(1200,275)"/>
+    <use href="#snowflake" transform="translate(250,400)"/>
+    <use href="#snowflake" transform="translate(550,380)"/>
+    <use href="#snowflake" transform="translate(850,420)"/>
+    <use href="#snowflake" transform="translate(1150,390)"/>
+  </g>
+  
+  <!-- The Iron Throne (Proxmox Citadel) -->
+  <g id="ironThrone">
+    <rect x="500" y="350" width="400" height="250" fill="url(#stoneTexture)" filter="url(#deepShadow)"/>
+    <rect x="500" y="350" width="400" height="250" fill="url(#throneGradient)" opacity="0.7"/>
+    
+    <!-- Massive throne structure with realistic proportions -->
+    <polygon points="520,350 540,320 580,310 620,305 680,300 720,305 760,310 800,320 820,330 860,340 880,350 880,600 520,600" fill="url(#stoneTexture)" filter="url(#deepShadow)"/>
+    
+    <!-- Sword details in the throne -->
+    <line x1="540" y1="320" x2="580" y2="380" stroke="#1a252f" stroke-width="4" opacity="0.8"/>
+    <line x1="560" y1="325" x2="600" y2="385" stroke="#1a252f" stroke-width="3" opacity="0.7"/>
+    <line x1="580" y1="330" x2="620" y2="390" stroke="#1a252f" stroke-width="4" opacity="0.8"/>
+    <line x1="760" y1="330" x2="800" y2="390" stroke="#1a252f" stroke-width="4" opacity="0.8"/>
+    <line x1="780" y1="325" x2="820" y2="385" stroke="#1a252f" stroke-width="3" opacity="0.7"/>
+    <line x1="800" y1="320" x2="840" y2="380" stroke="#1a252f" stroke-width="4" opacity="0.8"/>
+    
+    <!-- Central power core -->
+    <circle cx="700" cy="450" r="40" fill="url(#fireGlow)" filter="url(#fireEffect)"/>
+    <circle cx="700" cy="450" r="25" fill="#ffd700" opacity="0.8"/>
+    
+    <!-- Throne room pillars -->
+    <rect x="480" y="350" width="25" height="250" fill="url(#stoneTexture)" opacity="0.9"/>
+    <rect x="895" y="350" width="25" height="250" fill="url(#stoneTexture)" opacity="0.9"/>
+    
+    <text x="700" y="380" text-anchor="middle" font-family="Cinzel, serif" font-size="22" font-weight="bold" fill="#ecf0f1" filter="url(#deepShadow)">
+      THE IRON THRONE
+    </text>
+    <text x="700" y="405" text-anchor="middle" font-family="Cinzel, serif" font-size="16" fill="#bdc3c7" opacity="0.9">
+      Proxmox VE Citadel
+    </text>
+    <text x="700" y="430" text-anchor="middle" font-family="Courier New, monospace" font-size="14" fill="#e67e22" font-weight="bold">
+      80.209.240.244
+    </text>
+    
+    <text x="700" y="480" text-anchor="middle" font-family="Cinzel, serif" font-size="13" fill="#ecf0f1" opacity="0.8">
+      ovsbr0 • The Royal Bridge
+    </text>
+    <text x="700" y="500" text-anchor="middle" font-family="Courier New, monospace" font-size="11" fill="#95a5a6">
+      ovsbr0-public | ovsbr0-private
+    </text>
+    <text x="700" y="520" text-anchor="middle" font-family="Courier New, monospace" font-size="11" fill="#95a5a6">
+      Gateway: 10.0.0.1/24
+    </text>
+    <text x="700" y="545" text-anchor="middle" font-family="Cinzel, serif" font-size="12" fill="#f39c12" opacity="0.9">
+      ⚔️ Nginx • Proxmox UI • Stream Module ⚔️
+    </text>
+    <text x="700" y="570" text-anchor="middle" font-family="Cinzel, serif" font-size="11" fill="#e74c3c" font-style="italic">
+      "Power resides where men believe it resides"
+    </text>
+  </g>
+  
+  <!-- Castle Black (Netmaker Fortress) -->
+  <g id="castleBlack">
+    <rect x="150" y="650" width="350" height="200" fill="url(#stoneTexture)" filter="url(#deepShadow)"/>
+    <rect x="150" y="650" width="350" height="200" fill="url(#iceGlow)" opacity="0.4"/>
+    
+    <!-- Castle towers with realistic medieval architecture -->
+    <circle cx="200" cy="640" r="25" fill="url(#stoneTexture)" filter="url(#iceEffect)"/>
+    <circle cx="275" cy="635" r="30" fill="url(#stoneTexture)" filter="url(#iceEffect)"/>
+    <circle cx="350" cy="640" r="25" fill="url(#stoneTexture)" filter="url(#iceEffect)"/>
+    <circle cx="425" cy="635" r="30" fill="url(#stoneTexture)" filter="url(#iceEffect)"/>
+    <circle cx="475" cy="640" r="25" fill="url(#stoneTexture)" filter="url(#iceEffect)"/>
+    
+    <!-- Battlements -->
+    <rect x="170" y="630" width="15" height="30" fill="url(#stoneTexture)"/>
+    <rect x="195" y="625" width="15" height="35" fill="url(#stoneTexture)"/>
+    <rect x="220" y="630" width="15" height="30" fill="url(#stoneTexture)"/>
+    <rect x="405" y="630" width="15" height="30" fill="url(#stoneTexture)"/>
+    <rect x="430" y="625" width="15" height="35" fill="url(#stoneTexture)"/>
+    <rect x="455" y="630" width="15" height="30" fill="url(#stoneTexture)"/>
+    
+    <!-- Night's Watch braziers -->
+    <circle cx="200" cy="620" r="8" fill="url(#fireGlow)" filter="url(#fireEffect)"/>
+    <circle cx="425" cy="620" r="8" fill="url(#fireGlow)" filter="url(#fireEffect)"/>
+    
+    <text x="325" y="690" text-anchor="middle" font-family="Cinzel, serif" font-size="20" font-weight="bold" fill="#e1f0fb" filter="url(#iceEffect)">
+      CASTLE BLACK
+    </text>
+    <text x="325" y="715" text-anchor="middle" font-family="Cinzel, serif" font-size="14" fill="#d6e7f8" opacity="0.9">
+      The Night's Watch • Netmaker LXC Fortress
+    </text>
+    <text x="325" y="740" text-anchor="middle" font-family="Courier New, monospace" font-size="13" fill="#c1ddf3" font-weight="bold">
+      eth0: 10.0.0.151/24
+    </text>
+    <text x="325" y="760" text-anchor="middle" font-family="Courier New, monospace" font-size="13" fill="#c1ddf3" font-weight="bold">
+      eth1: 80.209.240.245/25
+    </text>
+    
+    <text x="325" y="790" text-anchor="middle" font-family="Cinzel, serif" font-size="12" fill="#b8d4f1" opacity="0.8">
+      Guardians of the Mesh
+    </text>
+    <text x="325" y="815" text-anchor="middle" font-family="Cinzel, serif" font-size="11" fill="#a8c8ec">
+      ❄️ Netmaker API • MQTT • WireGuard Tunnels ❄️
+    </text>
+    <text x="325" y="835" text-anchor="middle" font-family="Cinzel, serif" font-size="10" fill="#87ceeb" font-style="italic">
+      "The night is dark and full of packets"
+    </text>
+  </g>
+  
+  <!-- Winterfell (Home Server Keep) -->
+  <g id="winterfell">
+    <rect x="900" y="650" width="350" height="200" fill="url(#stoneTexture)" filter="url(#deepShadow)"/>
+    <rect x="900" y="650" width="350" height="200" fill="linear-gradient(135deg, rgba(44,62,80,0.8) 0%, rgba(52,73,94,0.6) 100%)"/>
+    
+    <!-- Winterfell's distinctive towers -->
+    <circle cx="950" cy="635" r="28" fill="url(#stoneTexture)" filter="url(#deepShadow)"/>
+    <circle cx="1025" cy="630" r="35" fill="url(#stoneTexture)" filter="url(#deepShadow)"/>
+    <circle cx="1100" cy="635" r="28" fill="url(#stoneTexture)" filter="url(#deepShadow)"/>
+    <circle cx="1175" cy="630" r="35" fill="url(#stoneTexture)" filter="url(#deepShadow)"/>
+    <circle cx="1225" cy="640" r="25" fill="url(#stoneTexture)" filter="url(#deepShadow)"/>
+    
+    <!-- Stark banners -->
+    <rect x="1015" y="600" width="20" height="40" fill="#8b4513" opacity="0.8"/>
+    <rect x="1015" y="600" width="20" height="25" fill="#2c3e50"/>
+    <circle cx="1025" cy="610" r="3" fill="#ecf0f1"/> <!-- Direwolf symbol -->
+    
+    <!-- Godswood heart tree -->
+    <circle cx="1125" cy="720" r="15" fill="#654321"/>
+    <path d="M1125,705 Q1135,715 1125,725 Q1115,715 1125,705" fill="#228b22" opacity="0.7"/>
+    
+    <text x="1125" y="690" text-anchor="middle" font-family="Cinzel, serif" font-size="20" font-weight="bold" fill="#ecf0f1" filter="url(#deepShadow)">
+      WINTERFELL
+    </text>
+    <text x="1125" y="715" text-anchor="middle" font-family="Cinzel, serif" font-size="14" fill="#bdc3c7" opacity="0.9">
+      House Stark • Home Server Stronghold
+    </text>
+    <text x="1125" y="740" text-anchor="middle" font-family="Courier New, monospace" font-size="12" fill="#95a5a6">
+      mgmt-int: 10.88.88.2/24
+    </text>
+    <text x="1125" y="760" text-anchor="middle" font-family="Courier New, monospace" font-size="12" fill="#95a5a6">
+      nm-int: 100.104.70.2/24
+    </text>
+    
+    <text x="1125" y="785" text-anchor="middle" font-family="Cinzel, serif" font-size="12" fill="#ecf0f1" opacity="0.8">
+      The North Remembers
+    </text>
+    <text x="1125" y="805" text-anchor="middle" font-family="Cinzel, serif" font-size="11" fill="#bdc3c7">
+      🐺 OVS Bridges • Mesh Endpoint • Honor 🐺
+    </text>
+    <text x="1125" y="825" text-anchor="middle" font-family="Cinzel, serif" font-size="10" fill="#95a5a6" font-style="italic">
+      "Winter is coming... and so is IPv6"
+    </text>
+  </g>
+  
+  <!-- King's Landing (Router Throne) -->
+  <g id="kingsLanding">
+    <rect x="550" y="750" width="300" height="150" fill="url(#stoneTexture)" filter="url(#deepShadow)"/>
+    <rect x="550" y="750" width="300" height="150" fill="linear-gradient(45deg, rgba(241,196,15,0.3) 0%, rgba(230,126,34,0.5) 100%)"/>
+    
+    <!-- Red Keep towers -->
+    <circle cx="600" cy="740" r="20" fill="#e74c3c" filter="url(#fireEffect)"/>
+    <circle cx="700" cy="735" r="25" fill="#c0392b" filter="url(#fireEffect)"/>
+    <circle cx="800" cy="740" r="20" fill="#e74c3c" filter="url(#fireEffect)"/>
+    
+    <!-- Crown atop the central tower -->
+    <polygon points="685,715 695,705 705,705 715,715 700,690 685,715" fill="#ffd700" filter="url(#fireEffect)"/>
+    <circle cx="700" cy="700" r="3" fill="#ff6347"/>
+    
+    <!-- Royal banners -->
+    <rect x="590" y="710" width="15" height="30" fill="#8b0000"/>
+    <rect x="795" y="710" width="15" height="30" fill="#8b0000"/>
+    
+    <text x="700" y="780" text-anchor="middle" font-family="Cinzel, serif" font-size="18" font-weight="bold" fill="#2c3e50" filter="url(#deepShadow)">
+      KING'S LANDING
+    </text>
+    <text x="700" y="800" text-anchor="middle" font-family="Cinzel, serif" font-size="14" fill="#34495e" opacity="0.9">
+      House Lannister • Router Dominion
+    </text>
+    <text x="700" y="825" text-anchor="middle" font-family="Courier New, monospace" font-size="13" fill="#8b4513" font-weight="bold">
+      Gateway: 10.88.88.1/24
+    </text>
+    <text x="700" y="850" text-anchor="middle" font-family="Cinzel, serif" font-size="12" fill="#d35400" opacity="0.8">
+      DHCP Authority • Routing Decree
+    </text>
+    <text x="700" y="875" text-anchor="middle" font-family="Cinzel, serif" font-size="11" fill="#e67e22">
+      👑 "Hear Me Route!" 👑
+    </text>
+    <text x="700" y="890" text-anchor="middle" font-family="Cinzel, serif" font-size="9" fill="#c0392b" font-style="italic">
+      "A Lannister always pays his debts... and routes his packets"
+    </text>
+  </g>
+  
+  <!-- Mystical network connections with realistic atmospheric effects -->
+  <g id="mysticalConnections">
+    <!-- Fire and Blood connection (Iron Throne to Castle Black) -->
+    <path d="M600,600 Q400,625 325,650" stroke="url(#fireGradient)" stroke-width="4" fill="none" opacity="0.8" filter="url(#fireEffect)"/>
+    <text x="450" y="620" font-family="Cinzel, serif" font-size="11" fill="#e74c3c" opacity="0.9">
+      🔥 Fire & Blood Bridge
+    </text>
+    <text x="450" y="635" font-family="Courier New, monospace" font-size="9" fill="#c0392b">
+      ovsbr0 Private: 10.0.0.0/24
+    </text>
+    
+    <!-- Winter is Coming connection (Iron Throne to Winterfell) -->
+    <path d="M800,600 Q950,625 1025,650" stroke="url(#iceGradient)" stroke-width="4" fill="none" opacity="0.8" filter="url(#iceEffect)"/>
+    <text x="900" y="620" font-family="Cinzel, serif" font-size="11" fill="#3498db" opacity="0.9">
+      ❄️ Winter is Coming Mesh
+    </text>
+    <text x="900" y="635" font-family="Courier New, monospace" font-size="9" fill="#2980b9">
+      WireGuard: 100.104.70.0/24
+    </text>
+    
+    <!-- Golden Crown connections (King's Landing to all) -->
+    <path d="M650,750 Q625,675 675,600" stroke="#f39c12" stroke-width="3" fill="none" opacity="0.7" stroke-dasharray="8,4"/>
+    <path d="M750,750 Q775,675 725,600" stroke="#f39c12" stroke-width="3" fill="none" opacity="0.7" stroke-dasharray="8,4"/>
+    <path d="M600,800 Q400,775 350,750" stroke="#f39c12" stroke-width="2" fill="none" opacity="0.6" stroke-dasharray="5,3"/>
+    <path d="M800,800 Q950,775 1000,750" stroke="#f39c12" stroke-width="2" fill="none" opacity="0.6" stroke-dasharray="5,3"/>
+    
+    <!-- Internet realm connection (mystical portal above) -->
+    <circle cx="700" cy="300" r="30" fill="url(#fireGlow)" filter="url(#fireEffect)" opacity="0.8"/>
+    <circle cx="700" cy="300" r="20" fill="#9b59b6" opacity="0.6"/>
+    <path d="M700,330 Q700,340 700,350" stroke="#9b59b6" stroke-width="5" fill="none" filter="url(#fireEffect)"/>
+    <text x="740" y="305" font-family="Cinzel, serif" font-size="12" fill="#9b59b6" opacity="0.9">
+      ⚡ The Internet Realm ⚡
+    </text>
+  </g>
+  
+  <!-- Ancient scroll legend with weathered appearance -->
+  <g id="ancientLegend">
+    <rect x="50" y="300" width="280" height="350" fill="url(#parchmentTexture)" filter="url(#deepShadow)"/>
+    <rect x="50" y="300" width="280" height="350" fill="none" stroke="#8b4513" stroke-width="2" stroke-dasharray="5,3" opacity="0.7"/>
+    
+    <!-- Burned corners -->
+    <circle cx="70" cy="320" r="8" fill="#654321" opacity="0.6"/>
+    <circle cx="310" cy="320" r="10" fill="#654321" opacity="0.5"/>
+    <circle cx="70" cy="630" r="12" fill="#654321" opacity="0.4"/>
+    <circle cx="310" cy="630" r="9" fill="#654321" opacity="0.6"/>
+    
+    <text x="190" y="330" text-anchor="middle" font-family="Cinzel, serif" font-size="16" font-weight="bold" fill="#2c1810">
+      HOUSES & DOMAINS
+    </text>
+    
+    <!-- House emblems with descriptions -->
+    <circle cx="80" cy="360" r="12" fill="url(#throneGradient)" filter="url(#deepShadow)"/>
+    <text x="105" y="367" font-family="Cinzel, serif" font-size="12" fill="#2c3e50">House Iron Throne</text>
+    <text x="105" y="380" font-family="Cinzel, serif" font-size="10" fill="#5d4037" opacity="0.8">The Proxmox Rulers</text>
+    
+    <circle cx="80" cy="400" r="12" fill="url(#iceGradient)" filter="url(#iceEffect)"/>
+    <text x="105" y="407" font-family="Cinzel, serif" font-size="12" fill="#2c3e50">House Night's Watch</text>
+    <text x="105" y="420" font-family="Cinzel, serif" font-size="10" fill="#5d4037" opacity="0.8">The Mesh Guardians</text>
+    
+    <circle cx="80" cy="440" r="12" fill="url(#stoneTexture)" filter="url(#deepShadow)"/>
+    <text x="105" y="447" font-family="Cinzel, serif" font-size="12" fill="#2c3e50">House Stark</text>
+    <text x="105" y="460" font-family="Cinzel, serif" font-size="10" fill="#5d4037" opacity="0.8">The Northern Servers</text>
+    
+    <circle cx="80" cy="480" r="12" fill="url(#fireGradient)" filter="url(#fireEffect)"/>
+    <text x="105" y="487" font-family="Cinzel, serif" font-size="12" fill="#2c3e50">House Lannister</text>
+    <text x="105" y="500" font-family="Cinzel, serif" font-size="10" fill="#5d4037" opacity="0.8">The Router Lords</text>
+    
+    <!-- Network types legend -->
+    <line x1="80" y1="530" x2="300" y2="530" stroke="#e74c3c" stroke-width="3" opacity="0.8"/>
+    <text x="105" y="545" font-family="Cinzel, serif" font-size="11" fill="#2c3e50">Private Networks (Fire & Blood)</text>
+    
+    <line x1="80" y1="560" x2="300" y2="560" stroke="#3498db" stroke-width="3" opacity="0.8"/>
+    <text x="105" y="575" font-family="Cinzel, serif" font-size="11" fill="#2c3e50">Mesh Overlay (Winter Magic)</text>
+    
+    <line x1="80" y1="590" x2="300" y2="590" stroke="#f39c12" stroke-width="2" stroke-dasharray="5,3" opacity="0.7"/>
+    <text x="105" y="605" font-family="Cinzel, serif" font-size="11" fill="#2c3e50">Royal Decrees (Management)</text>
+    
+    <text x="190" y="635" text-anchor="middle" font-family="Cinzel, serif" font-size="10" fill="#8b4513" font-style="italic">
+      "The realm must have its networks"
+    </text>
+  </g>
+  
+  <!-- Dual IP Realm Banner (Epic proclamation) -->
+  <g id="dualIpRealm">
+    <rect x="1050" y="300" width="300" height="180" fill="url(#fireGradient)" filter="url(#deepShadow)" opacity="0.9"/>
+    <rect x="1050" y="300" width="300" height="180" fill="url(#parchmentTexture)" opacity="0.3"/>
+    
+    <!-- Royal seals -->
+    <circle cx="1080" cy="330" r="15" fill="#ffd700" filter="url(#fireEffect)"/>
+    <circle cx="1320" cy="330" r="15" fill="#ffd700" filter="url(#fireEffect)"/>
+    <circle cx="1080" cy="450" r="15" fill="#ffd700" filter="url(#fireEffect)"/>
+    <circle cx="1320" cy="450" r="15" fill="#ffd700" filter="url(#fireEffect)"/>
+    
+    <text x="1200" y="330" text-anchor="middle" font-family="Cinzel, serif" font-size="18" font-weight="bold" fill="#ecf0f1" filter="url(#deepShadow)">
+      DUAL IP DOMINION
+    </text>
+    <text x="1200" y="355" text-anchor="middle" font-family="Cinzel, serif" font-size="12" fill="#f8f9fa" opacity="0.9">
+      Royal Decree of Separation
+    </text>
+    
+    <text x="1200" y="380" text-anchor="middle" font-family="Courier New, monospace" font-size="13" fill="#ffd700" font-weight="bold">
+      IP1: 80.209.240.244
+    </text>
+    <text x="1200" y="395" text-anchor="middle" font-family="Cinzel, serif" font-size="11" fill="#f8f9fa">
+      GhostBridge Command
+    </text>
+    
+    <text x="1200" y="420" text-anchor="middle" font-family="Courier New, monospace" font-size="13" fill="#ffd700" font-weight="bold">
+      IP2: 80.209.240.245
+    </text>
+    <text x="1200" y="435" text-anchor="middle" font-family="Cinzel, serif" font-size="11" fill="#f8f9fa">
+      Netmaker Direct
+    </text>
+    
+    <text x="1200" y="465" text-anchor="middle" font-family="Cinzel, serif" font-size="10" fill="#e8dcc0" font-style="italic">
+      "Divide and conquer the traffic flows"
+    </text>
+  </g>
+  
+  <!-- Ancient footer inscription -->
+  <text x="700" y="960" text-anchor="middle" font-family="Cinzel, serif" font-size="14" fill="#8b4513" opacity="0.7" filter="url(#deepShadow)">
+    "When you play the game of networks, you win or you disconnect."
+  </text>
+  <text x="700" y="980" text-anchor="middle" font-family="Cinzel, serif" font-size="11" fill="#654321" opacity="0.6">
+    — Maester Proxmox, First of His Name, King of the Seven VLANs
+  </text>
+</svg>

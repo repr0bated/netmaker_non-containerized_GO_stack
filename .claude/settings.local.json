@@ -1,0 +1,16 @@
+{
+  "permissions": {
+    "allow": [
+      "Bash(chmod:*)",
+      "Bash(pvesm status:*)",
+      "Bash(cat:*)",
+      "Bash(pct list:*)",
+      "Bash(grep:*)",
+      "Bash(find:*)",
+      "Bash(bash:*)",
+      "Bash(rm:*)",
+      "Bash(sudo:*)"
+    ],
+    "deny": []
+  }
+}

@@ -1,0 +1,72 @@
+# GhostBridge Production Netmaker Configuration
+# Based on real-world deployment: hobsonschoice.net
+# Container IP: 10.0.0.101, Host IP: 80.209.240.244
+
+version: v0.20.0
+
+server:
+  host: "0.0.0.0"
+  apiport: 8081
+  grpcport: 8082
+  restbackend: true
+  agentbackend: true
+  messagequeuebackend: true
+  dnsdisabled: false
+  displaykeys: true
+  hostnetwork: "off"
+
+# Database Configuration (SQLite for simplicity)
+database:
+  host: ""
+  port: 0
+  username: ""
+  password: ""
+  name: ""
+  sslmode: ""
+  endpoint: ""
+
+# CRITICAL: Proper MQTT broker configuration
+# Uses local Mosquitto with authentication
+messagequeue:
+  host: "127.0.0.1"
+  port: 1883
+  endpoint: "mqtt://netmaker:SECURE_PASSWORD_HERE@127.0.0.1:1883"
+  username: "netmaker"
+  password: "SECURE_PASSWORD_HERE"
+
+# API Configuration
+api:
+  corsallowed: "*"
+  endpoint: "https://netmaker.hobsonschoice.net"
+
+# OAuth Configuration (disabled for simplicity)
+oauth:
+  github_client_id: ""
+  github_client_secret: ""
+  google_client_id: ""
+  google_client_secret: ""
+  oidc_issuer: ""
+
+# Security Configuration
+jwt_validity_duration: "24h"
+rachecks: "on"
+telemetry: "off"
+mq_admin_password: ""
+
+# Network Settings
+manage_iptables: "on"
+port_forward_services: ""
+default_node_limit: 999999
+
+# Server Configuration
+servercheckin: "on"
+autopull: "on"
+dnsmode: ""
+verbosity: 1
+platform: "linux"
+
+# Master Key - CHANGE THIS IN PRODUCTION
+masterkey: "REPLACE_WITH_SECURE_MASTER_KEY"
+
+# Logging
+logverbosity: 1

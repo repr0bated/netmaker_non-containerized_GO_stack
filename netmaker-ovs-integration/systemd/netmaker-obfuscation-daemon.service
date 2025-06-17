@@ -1,0 +1,36 @@
+[Unit]
+Description=Netmaker OVS Obfuscation Daemon
+Documentation=man:systemd.service(5)
+After=networking.service openvswitch-switch.service netmaker-ovs-bridge.service
+Wants=networking.service openvswitch-switch.service
+Requires=openvswitch-switch.service
+PartOf=netmaker-ovs-bridge.service
+
+[Service]
+Type=simple
+ExecStart=/usr/local/bin/obfuscation-manager.sh daemon
+Restart=always
+RestartSec=10
+User=root
+Group=root
+
+# Environment
+Environment=PATH=/usr/local/sbin:/usr/local/bin:/usr/sbin:/usr/bin:/sbin:/bin
+
+# Resource limits (mild obfuscation should be lightweight)
+CPUQuota=10%
+MemoryLimit=64M
+
+# Security settings
+NoNewPrivileges=yes
+ProtectSystem=strict
+ProtectHome=yes
+ReadWritePaths=/var/lib/netmaker /var/run
+
+# Logging
+StandardOutput=journal
+StandardError=journal
+SyslogIdentifier=netmaker-obfuscation
+
+[Install]
+WantedBy=multi-user.target
